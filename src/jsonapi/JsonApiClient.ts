@@ -1,5 +1,6 @@
 import { Model, ModelConstructor, RelationshipType } from './JsonApiModel';
 import { Data, Document } from './JsonApi';
+import { CacheStorage } from '../../base/CacheStorage';
 
 interface ConstructorsByType {
   [t: string]: ModelConstructor;
@@ -101,7 +102,7 @@ export class SvapiClient {
   constructor(
     baseUri: string,
     private readonly requestFn: RequestFn,
-    private readonly cache: Storage | null,
+    private readonly cache: CacheStorage | null = null,
   ) {
     this.baseUri = baseUri.replace(/\/+$/, '');
   }
@@ -198,7 +199,6 @@ export class SvapiClient {
     const Ctor = SvapiClient.modelConstructorByType[data.type];
 
     if (!Ctor) {
-      console.warn(`missing constructor for type ${data.type}`);
       return null;
     }
 

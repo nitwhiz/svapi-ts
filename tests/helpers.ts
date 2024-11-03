@@ -1,29 +1,18 @@
 import { SvapiClient } from '../src/jsonapi/JsonApiClient';
+import { CacheStorage } from '../base/CacheStorage';
 
-class MockCache implements Storage {
+class MockCache implements CacheStorage {
   private values: Record<string, string> = {};
 
-  public get length() {
-    return Object.keys(this.values).length;
-  }
-
-  clear(): void {
-    this.values = {};
-  }
-
-  getItem(key: string): string | null {
+  public getItem(key: string): string | null {
     return this.values[key] || null;
   }
 
-  key(_: number): string | null {
-    return null;
-  }
-
-  removeItem(key: string): void {
+  public removeItem(key: string): void {
     delete this.values[key];
   }
 
-  setItem(key: string, value: string): void {
+  public setItem(key: string, value: string): void {
     this.values[key] = value;
   }
 }
