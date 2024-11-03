@@ -1,6 +1,7 @@
 import { Model, ModelConstructor, RelationshipType } from './JsonApiModel';
 import { Data, Document } from './JsonApi';
 import { CacheStorage } from '../base/CacheStorage';
+import { ModelType, Type } from '../base/Types';
 
 interface ConstructorsByType {
   [t: string]: ModelConstructor;
@@ -36,7 +37,8 @@ type RequestFn = (uri: string) => Promise<{
   json(): Promise<any>;
 }>;
 
-const CACHE_PREFIX = 'svapiv2.cache.';
+const API_VERSION = 'v2';
+const CACHE_PREFIX = `svapi.${API_VERSION}.cache.`;
 
 export class SvapiClient {
   private static readonly modelConstructorByType: ConstructorsByType = {};
@@ -105,6 +107,19 @@ export class SvapiClient {
     private readonly cache: CacheStorage | null = null,
   ) {
     this.baseUri = baseUri.replace(/\/+$/, '');
+  }
+
+  public getById<T extends Type = Type, R = ModelType<T>>(
+    type: T,
+    id: string,
+  ): Promise<R | null> {
+    return this.fetchModels<R>(`/${API_VERSION}/${type}/${id}`);
+  }
+
+  public getAll<T extends Type = Type, R = ModelType<T>[]>(
+    type: T,
+  ): Promise<R | null> {
+    return this.fetchModels<R>(`/${API_VERSION}/${type}`);
   }
 
   public async fetchModels<R>(path: string): Promise<R | null> {

@@ -5,16 +5,16 @@ import fixtureSingleItemGiftTastes from '../fixtures/single-item-giftTastes.json
 import fixtureSingleItemIngredientGroups from '../fixtures/single-item-ingredientGroups.json';
 import fixtureSingleItemNames from '../fixtures/single-item-names.json';
 import fixtureSingleItemSourceRecipes from '../fixtures/single-item-sourceRecipes.json';
-import { Item } from '../../src/model/Item';
 import { svapiClient } from '../helpers';
 import { Category } from '../../src/model/Category';
 import { GiftTaste } from '../../src/model/GiftTaste';
 import { ItemName } from '../../src/model/ItemName';
+import { TypeItem } from '../../src/base/Types';
 
 test('Fetch And Parse Item', async () => {
   const svapi = svapiClient(fixtureSingleItem);
 
-  const item = await svapi.fetchModels<Item>('');
+  const item = await svapi.getById(TypeItem, '');
 
   expect(item?.id).toBe('8562d2c0-a721-58a5-ac15-114b384f5062');
 
@@ -46,7 +46,7 @@ test('Fetch Item Relationships', async () => {
     fixtureSingleItemSourceRecipes,
   ]);
 
-  const item = await svapi.fetchModels<Item>('');
+  const item = await svapi.getById(TypeItem, '');
 
   expect(await item?.names).toBeInstanceOf(Array);
   expect(await item?.names).toHaveLength(10);

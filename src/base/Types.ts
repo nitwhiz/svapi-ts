@@ -23,17 +23,26 @@ export const TypeRecipe = 'recipes';
 export const TypeRecipeIngredient = 'recipeIngredients';
 export const TypeRecipeIngredientGroup = 'recipeIngredientGroups';
 
+const Types = {
+  [TypeCategory]: Category,
+  [TypeCategoryName]: CategoryName,
+  [TypeGiftTaste]: GiftTaste,
+  [TypeItem]: Item,
+  [TypeItemName]: ItemName,
+  [TypeLanguage]: Language,
+  [TypeNpc]: Npc,
+  [TypeNpcName]: NpcName,
+  [TypeRecipe]: Recipe,
+  [TypeRecipeIngredient]: RecipeIngredient,
+  [TypeRecipeIngredientGroup]: RecipeIngredientGroup,
+} as const;
+
+export type Type = keyof typeof Types;
+export type ModelType<T extends Type> =
+  (typeof Types)[T] extends new () => infer U ? U : never;
+
 export const registerTypes = () => {
-  SvapiClient.registerModel(TypeCategory, Category);
-  SvapiClient.registerModel(TypeCategoryName, CategoryName);
-  SvapiClient.registerModel(TypeGiftTaste, GiftTaste);
-  SvapiClient.registerModel(TypeItem, Item);
-  SvapiClient.registerModel(TypeItemName, ItemName);
-  SvapiClient.registerModel(TypeLanguage, Language);
-  SvapiClient.registerModel(TypeNpc, Npc);
-  SvapiClient.registerModel(TypeNpcName, NpcName);
-  SvapiClient.registerModel(TypeNpcName, NpcName);
-  SvapiClient.registerModel(TypeRecipe, Recipe);
-  SvapiClient.registerModel(TypeRecipeIngredient, RecipeIngredient);
-  SvapiClient.registerModel(TypeRecipeIngredientGroup, RecipeIngredientGroup);
+  for (const e of Object.entries(Types)) {
+    SvapiClient.registerModel(e[0], e[1]);
+  }
 };
