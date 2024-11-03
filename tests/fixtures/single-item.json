@@ -1,0 +1,51 @@
+{
+  "data": {
+    "type": "items",
+    "id": "8562d2c0-a721-58a5-ac15-114b384f5062",
+    "attributes": {
+      "internalId": "(O)591",
+      "type": "basic",
+      "flags": ["giftable"]
+    },
+    "relationships": {
+      "category": {
+        "links": {
+          "related": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/category",
+          "self": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/relationships/category"
+        }
+      },
+      "giftTastes": {
+        "links": {
+          "related": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/giftTastes",
+          "self": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/relationships/giftTastes"
+        }
+      },
+      "ingredientGroups": {
+        "links": {
+          "related": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/ingredientGroups",
+          "self": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/relationships/ingredientGroups"
+        }
+      },
+      "names": {
+        "links": {
+          "related": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/names",
+          "self": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/relationships/names"
+        }
+      },
+      "sourceRecipes": {
+        "links": {
+          "related": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/sourceRecipes",
+          "self": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/relationships/sourceRecipes"
+        }
+      }
+    },
+    "links": {
+      "texture": "/v2/textures/items/5/54dfa6e60581afa93ff302671a6cdc6b5818c3d1d14fb1e8a34b4a85e8d36447.png"
+    }
+  },
+  "meta": {
+    "author": "nitwhiz",
+    "license": "wtfpl",
+    "license-url": "http://www.wtfpl.net/about/"
+  }
+}

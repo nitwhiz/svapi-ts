@@ -1,0 +1,41 @@
+name: Build and Publish
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+  pull_request:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+
+  build-and-publish-package:
+    name: Build and push to package registry
+    runs-on: ubuntu-22.04
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          registry-url: 'https://npm.pkg.github.com'
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+          run_install: |
+            - args: [--frozen-lockfile]
+
+      - run: pnpm build
+
+      - run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ github.ref_type == 'tag' }}

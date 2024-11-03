@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "categories",
+    "id": "19a298b4-e367-583a-ac30-620f0e3199fa",
+    "attributes": {
+      "internalId": "-80"
+    },
+    "relationships": {
+      "items": {
+        "links": {
+          "related": "/v2/categories/19a298b4-e367-583a-ac30-620f0e3199fa/items",
+          "self": "/v2/categories/19a298b4-e367-583a-ac30-620f0e3199fa/relationships/items"
+        }
+      },
+      "names": {
+        "links": {
+          "related": "/v2/categories/19a298b4-e367-583a-ac30-620f0e3199fa/names",
+          "self": "/v2/categories/19a298b4-e367-583a-ac30-620f0e3199fa/relationships/names"
+        }
+      }
+    }
+  },
+  "meta": {
+    "author": "nitwhiz",
+    "license": "wtfpl",
+    "license-url": "http://www.wtfpl.net/about/"
+  }
+}

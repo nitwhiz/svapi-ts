@@ -1,0 +1,723 @@
+{
+  "data": [
+    {
+      "type": "giftTastes",
+      "id": "63110e44-cde4-57ec-aa27-fe9fe580b002",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/63110e44-cde4-57ec-aa27-fe9fe580b002/item",
+            "self": "/v2/giftTastes/63110e44-cde4-57ec-aa27-fe9fe580b002/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/63110e44-cde4-57ec-aa27-fe9fe580b002/npc",
+            "self": "/v2/giftTastes/63110e44-cde4-57ec-aa27-fe9fe580b002/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "aea94c66-7cbd-5c62-a051-62c2b8e719a5",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/aea94c66-7cbd-5c62-a051-62c2b8e719a5/item",
+            "self": "/v2/giftTastes/aea94c66-7cbd-5c62-a051-62c2b8e719a5/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/aea94c66-7cbd-5c62-a051-62c2b8e719a5/npc",
+            "self": "/v2/giftTastes/aea94c66-7cbd-5c62-a051-62c2b8e719a5/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "1a440eeb-c388-5813-a7ea-92e7229d91f6",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/1a440eeb-c388-5813-a7ea-92e7229d91f6/item",
+            "self": "/v2/giftTastes/1a440eeb-c388-5813-a7ea-92e7229d91f6/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/1a440eeb-c388-5813-a7ea-92e7229d91f6/npc",
+            "self": "/v2/giftTastes/1a440eeb-c388-5813-a7ea-92e7229d91f6/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "4aa7c41f-76bd-5a8f-82a9-114e866c1190",
+      "attributes": {
+        "taste": "dislike"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/4aa7c41f-76bd-5a8f-82a9-114e866c1190/item",
+            "self": "/v2/giftTastes/4aa7c41f-76bd-5a8f-82a9-114e866c1190/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/4aa7c41f-76bd-5a8f-82a9-114e866c1190/npc",
+            "self": "/v2/giftTastes/4aa7c41f-76bd-5a8f-82a9-114e866c1190/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "de7b149d-a8af-54b5-9f81-1be140d87dbc",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/de7b149d-a8af-54b5-9f81-1be140d87dbc/item",
+            "self": "/v2/giftTastes/de7b149d-a8af-54b5-9f81-1be140d87dbc/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/de7b149d-a8af-54b5-9f81-1be140d87dbc/npc",
+            "self": "/v2/giftTastes/de7b149d-a8af-54b5-9f81-1be140d87dbc/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "2622a23f-7e31-5f0d-8508-11cc292668e9",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/2622a23f-7e31-5f0d-8508-11cc292668e9/item",
+            "self": "/v2/giftTastes/2622a23f-7e31-5f0d-8508-11cc292668e9/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/2622a23f-7e31-5f0d-8508-11cc292668e9/npc",
+            "self": "/v2/giftTastes/2622a23f-7e31-5f0d-8508-11cc292668e9/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "302fc2cc-55d0-56fc-b05f-40cbe54b51d2",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/302fc2cc-55d0-56fc-b05f-40cbe54b51d2/item",
+            "self": "/v2/giftTastes/302fc2cc-55d0-56fc-b05f-40cbe54b51d2/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/302fc2cc-55d0-56fc-b05f-40cbe54b51d2/npc",
+            "self": "/v2/giftTastes/302fc2cc-55d0-56fc-b05f-40cbe54b51d2/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "3e46d25e-fedb-552a-8aec-bf042aa0970d",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/3e46d25e-fedb-552a-8aec-bf042aa0970d/item",
+            "self": "/v2/giftTastes/3e46d25e-fedb-552a-8aec-bf042aa0970d/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/3e46d25e-fedb-552a-8aec-bf042aa0970d/npc",
+            "self": "/v2/giftTastes/3e46d25e-fedb-552a-8aec-bf042aa0970d/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "ba0d493d-5ced-5adc-98a5-bc1ebb44c95b",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/ba0d493d-5ced-5adc-98a5-bc1ebb44c95b/item",
+            "self": "/v2/giftTastes/ba0d493d-5ced-5adc-98a5-bc1ebb44c95b/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/ba0d493d-5ced-5adc-98a5-bc1ebb44c95b/npc",
+            "self": "/v2/giftTastes/ba0d493d-5ced-5adc-98a5-bc1ebb44c95b/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "d104d4a2-6093-581c-8698-99cba3d59f32",
+      "attributes": {
+        "taste": "dislike"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/d104d4a2-6093-581c-8698-99cba3d59f32/item",
+            "self": "/v2/giftTastes/d104d4a2-6093-581c-8698-99cba3d59f32/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/d104d4a2-6093-581c-8698-99cba3d59f32/npc",
+            "self": "/v2/giftTastes/d104d4a2-6093-581c-8698-99cba3d59f32/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "52a615e2-204e-5264-9e2b-94403eb0e166",
+      "attributes": {
+        "taste": "love"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/52a615e2-204e-5264-9e2b-94403eb0e166/item",
+            "self": "/v2/giftTastes/52a615e2-204e-5264-9e2b-94403eb0e166/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/52a615e2-204e-5264-9e2b-94403eb0e166/npc",
+            "self": "/v2/giftTastes/52a615e2-204e-5264-9e2b-94403eb0e166/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "f2e52e02-c547-5b6f-95e6-3d85f9135691",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/f2e52e02-c547-5b6f-95e6-3d85f9135691/item",
+            "self": "/v2/giftTastes/f2e52e02-c547-5b6f-95e6-3d85f9135691/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/f2e52e02-c547-5b6f-95e6-3d85f9135691/npc",
+            "self": "/v2/giftTastes/f2e52e02-c547-5b6f-95e6-3d85f9135691/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "1e397fba-f255-5156-8938-7b22452c407d",
+      "attributes": {
+        "taste": "dislike"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/1e397fba-f255-5156-8938-7b22452c407d/item",
+            "self": "/v2/giftTastes/1e397fba-f255-5156-8938-7b22452c407d/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/1e397fba-f255-5156-8938-7b22452c407d/npc",
+            "self": "/v2/giftTastes/1e397fba-f255-5156-8938-7b22452c407d/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "5b9e54b6-a669-5a04-a9b1-d951a8304907",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/5b9e54b6-a669-5a04-a9b1-d951a8304907/item",
+            "self": "/v2/giftTastes/5b9e54b6-a669-5a04-a9b1-d951a8304907/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/5b9e54b6-a669-5a04-a9b1-d951a8304907/npc",
+            "self": "/v2/giftTastes/5b9e54b6-a669-5a04-a9b1-d951a8304907/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "69ac47e3-a363-58b4-957b-b998745bc376",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/69ac47e3-a363-58b4-957b-b998745bc376/item",
+            "self": "/v2/giftTastes/69ac47e3-a363-58b4-957b-b998745bc376/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/69ac47e3-a363-58b4-957b-b998745bc376/npc",
+            "self": "/v2/giftTastes/69ac47e3-a363-58b4-957b-b998745bc376/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "847b8be9-ce8b-5ca0-ba9d-2b2fd80c9f00",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/847b8be9-ce8b-5ca0-ba9d-2b2fd80c9f00/item",
+            "self": "/v2/giftTastes/847b8be9-ce8b-5ca0-ba9d-2b2fd80c9f00/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/847b8be9-ce8b-5ca0-ba9d-2b2fd80c9f00/npc",
+            "self": "/v2/giftTastes/847b8be9-ce8b-5ca0-ba9d-2b2fd80c9f00/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "1d40da35-5882-5144-9885-c17708f8b6cd",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/1d40da35-5882-5144-9885-c17708f8b6cd/item",
+            "self": "/v2/giftTastes/1d40da35-5882-5144-9885-c17708f8b6cd/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/1d40da35-5882-5144-9885-c17708f8b6cd/npc",
+            "self": "/v2/giftTastes/1d40da35-5882-5144-9885-c17708f8b6cd/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "ce6fe7c8-34ed-5a17-ae15-d712ba86791b",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/ce6fe7c8-34ed-5a17-ae15-d712ba86791b/item",
+            "self": "/v2/giftTastes/ce6fe7c8-34ed-5a17-ae15-d712ba86791b/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/ce6fe7c8-34ed-5a17-ae15-d712ba86791b/npc",
+            "self": "/v2/giftTastes/ce6fe7c8-34ed-5a17-ae15-d712ba86791b/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "a78b92a5-abcd-53cc-983c-c80b031c5450",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/a78b92a5-abcd-53cc-983c-c80b031c5450/item",
+            "self": "/v2/giftTastes/a78b92a5-abcd-53cc-983c-c80b031c5450/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/a78b92a5-abcd-53cc-983c-c80b031c5450/npc",
+            "self": "/v2/giftTastes/a78b92a5-abcd-53cc-983c-c80b031c5450/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "3d41b16f-cac7-588c-8622-caae91d430f1",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/3d41b16f-cac7-588c-8622-caae91d430f1/item",
+            "self": "/v2/giftTastes/3d41b16f-cac7-588c-8622-caae91d430f1/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/3d41b16f-cac7-588c-8622-caae91d430f1/npc",
+            "self": "/v2/giftTastes/3d41b16f-cac7-588c-8622-caae91d430f1/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "6a160bb8-32e7-5198-a8cb-4cd39638f327",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/6a160bb8-32e7-5198-a8cb-4cd39638f327/item",
+            "self": "/v2/giftTastes/6a160bb8-32e7-5198-a8cb-4cd39638f327/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/6a160bb8-32e7-5198-a8cb-4cd39638f327/npc",
+            "self": "/v2/giftTastes/6a160bb8-32e7-5198-a8cb-4cd39638f327/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "cde894a9-6b8e-5f56-adba-83dbcc8514b8",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/cde894a9-6b8e-5f56-adba-83dbcc8514b8/item",
+            "self": "/v2/giftTastes/cde894a9-6b8e-5f56-adba-83dbcc8514b8/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/cde894a9-6b8e-5f56-adba-83dbcc8514b8/npc",
+            "self": "/v2/giftTastes/cde894a9-6b8e-5f56-adba-83dbcc8514b8/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "4a26c080-0d47-5043-a205-bd51f6075bfd",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/4a26c080-0d47-5043-a205-bd51f6075bfd/item",
+            "self": "/v2/giftTastes/4a26c080-0d47-5043-a205-bd51f6075bfd/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/4a26c080-0d47-5043-a205-bd51f6075bfd/npc",
+            "self": "/v2/giftTastes/4a26c080-0d47-5043-a205-bd51f6075bfd/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "95d810cb-1534-5129-922e-11981382237f",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/95d810cb-1534-5129-922e-11981382237f/item",
+            "self": "/v2/giftTastes/95d810cb-1534-5129-922e-11981382237f/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/95d810cb-1534-5129-922e-11981382237f/npc",
+            "self": "/v2/giftTastes/95d810cb-1534-5129-922e-11981382237f/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "36ea091e-789f-5bc4-99c8-8848f0d34c67",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/36ea091e-789f-5bc4-99c8-8848f0d34c67/item",
+            "self": "/v2/giftTastes/36ea091e-789f-5bc4-99c8-8848f0d34c67/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/36ea091e-789f-5bc4-99c8-8848f0d34c67/npc",
+            "self": "/v2/giftTastes/36ea091e-789f-5bc4-99c8-8848f0d34c67/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "ec55c661-d242-5780-bff2-dff24f3d2a2f",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/ec55c661-d242-5780-bff2-dff24f3d2a2f/item",
+            "self": "/v2/giftTastes/ec55c661-d242-5780-bff2-dff24f3d2a2f/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/ec55c661-d242-5780-bff2-dff24f3d2a2f/npc",
+            "self": "/v2/giftTastes/ec55c661-d242-5780-bff2-dff24f3d2a2f/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "6b0f6755-5ef8-5b5b-bdcb-1925934c174d",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/6b0f6755-5ef8-5b5b-bdcb-1925934c174d/item",
+            "self": "/v2/giftTastes/6b0f6755-5ef8-5b5b-bdcb-1925934c174d/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/6b0f6755-5ef8-5b5b-bdcb-1925934c174d/npc",
+            "self": "/v2/giftTastes/6b0f6755-5ef8-5b5b-bdcb-1925934c174d/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "22c41fd1-d99e-52ca-8821-ce2d410b35c0",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/22c41fd1-d99e-52ca-8821-ce2d410b35c0/item",
+            "self": "/v2/giftTastes/22c41fd1-d99e-52ca-8821-ce2d410b35c0/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/22c41fd1-d99e-52ca-8821-ce2d410b35c0/npc",
+            "self": "/v2/giftTastes/22c41fd1-d99e-52ca-8821-ce2d410b35c0/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "7a25abdb-544b-5af0-b070-bbaf6919e72e",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/7a25abdb-544b-5af0-b070-bbaf6919e72e/item",
+            "self": "/v2/giftTastes/7a25abdb-544b-5af0-b070-bbaf6919e72e/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/7a25abdb-544b-5af0-b070-bbaf6919e72e/npc",
+            "self": "/v2/giftTastes/7a25abdb-544b-5af0-b070-bbaf6919e72e/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "9a92740b-9c73-5565-b589-6ffe78713a87",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/9a92740b-9c73-5565-b589-6ffe78713a87/item",
+            "self": "/v2/giftTastes/9a92740b-9c73-5565-b589-6ffe78713a87/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/9a92740b-9c73-5565-b589-6ffe78713a87/npc",
+            "self": "/v2/giftTastes/9a92740b-9c73-5565-b589-6ffe78713a87/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "6a33514d-82d3-5ab9-b6ee-04117087fbb4",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/6a33514d-82d3-5ab9-b6ee-04117087fbb4/item",
+            "self": "/v2/giftTastes/6a33514d-82d3-5ab9-b6ee-04117087fbb4/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/6a33514d-82d3-5ab9-b6ee-04117087fbb4/npc",
+            "self": "/v2/giftTastes/6a33514d-82d3-5ab9-b6ee-04117087fbb4/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "fab6afc3-6df3-514c-ad21-1eb544550d4f",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/fab6afc3-6df3-514c-ad21-1eb544550d4f/item",
+            "self": "/v2/giftTastes/fab6afc3-6df3-514c-ad21-1eb544550d4f/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/fab6afc3-6df3-514c-ad21-1eb544550d4f/npc",
+            "self": "/v2/giftTastes/fab6afc3-6df3-514c-ad21-1eb544550d4f/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "6751a77f-bd35-5e43-82b3-3177a2d3f4a6",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/6751a77f-bd35-5e43-82b3-3177a2d3f4a6/item",
+            "self": "/v2/giftTastes/6751a77f-bd35-5e43-82b3-3177a2d3f4a6/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/6751a77f-bd35-5e43-82b3-3177a2d3f4a6/npc",
+            "self": "/v2/giftTastes/6751a77f-bd35-5e43-82b3-3177a2d3f4a6/relationships/npc"
+          }
+        }
+      }
+    },
+    {
+      "type": "giftTastes",
+      "id": "7fdf33c3-d7cb-5b37-9d4a-bd38a1d985c9",
+      "attributes": {
+        "taste": "like"
+      },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/giftTastes/7fdf33c3-d7cb-5b37-9d4a-bd38a1d985c9/item",
+            "self": "/v2/giftTastes/7fdf33c3-d7cb-5b37-9d4a-bd38a1d985c9/relationships/item"
+          }
+        },
+        "npc": {
+          "links": {
+            "related": "/v2/giftTastes/7fdf33c3-d7cb-5b37-9d4a-bd38a1d985c9/npc",
+            "self": "/v2/giftTastes/7fdf33c3-d7cb-5b37-9d4a-bd38a1d985c9/relationships/npc"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "author": "nitwhiz",
+    "license": "wtfpl",
+    "license-url": "http://www.wtfpl.net/about/"
+  }
+}
