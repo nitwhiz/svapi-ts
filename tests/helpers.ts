@@ -1,5 +1,5 @@
 import { SvapiClient } from '../src/jsonapi/JsonApiClient';
-import { CacheStorage } from '../base/CacheStorage';
+import { CacheStorage } from '../src/base/CacheStorage';
 
 class MockCache implements CacheStorage {
   private values: Record<string, string> = {};

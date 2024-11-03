@@ -1,6 +1,6 @@
 import { Model, ModelConstructor, RelationshipType } from './JsonApiModel';
 import { Data, Document } from './JsonApi';
-import { CacheStorage } from '../../base/CacheStorage';
+import { CacheStorage } from '../base/CacheStorage';
 
 interface ConstructorsByType {
   [t: string]: ModelConstructor;
