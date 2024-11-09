@@ -1,15 +1,16 @@
 import { Model, ModelConstructor, RelationshipType } from './JsonApiModel';
 import { Data, Document } from './JsonApi';
-import { CacheStorage } from '../base/CacheStorage';
+import { CacheStorage } from '../cache/CacheStorage';
 import { ModelType, Type } from '../base/Types';
+import { RequestPool } from '../pool/RequestPool';
 
 interface ConstructorsByType {
-  [t: string]: ModelConstructor;
+  [typeName: string]: ModelConstructor;
 }
 
 interface RelationshipProperties {
-  [c: string]: {
-    [p: string]: {
+  [className: string]: {
+    [prop: string]: {
       type: string;
       name: string;
       relationship: RelationshipType;
@@ -18,24 +19,34 @@ interface RelationshipProperties {
 }
 
 interface PropertyMap {
-  [c: string]: {
-    [p: string]: string;
+  [className: string]: {
+    [prop: string]: string;
   };
 }
 
 interface MetaProperties {
-  [c: string]: {
-    [p: string]: {
+  [className: string]: {
+    [prop: string]: {
       name: string;
       source: 'meta' | 'links';
     };
   };
 }
 
-type RequestFn = (uri: string) => Promise<{
+export type RequestFn = (uri: string) => Promise<{
   status: number;
   json(): Promise<any>;
 }>;
+
+export interface Options {
+  cache: CacheStorage | null;
+  pooling: number;
+}
+
+const defaultOptions: Options = {
+  cache: null,
+  pooling: 5,
+};
 
 const API_VERSION = 'v2';
 const CACHE_PREFIX = `svapi.${API_VERSION}.cache.`;
@@ -101,12 +112,21 @@ export class SvapiClient {
 
   private readonly baseUri: string;
 
+  private readonly options: Options;
+
+  private readonly requestPool: RequestPool | null = null;
+
   constructor(
     baseUri: string,
     private readonly requestFn: RequestFn,
-    private readonly cache: CacheStorage | null = null,
+    options: Partial<Options> = defaultOptions,
   ) {
     this.baseUri = baseUri.replace(/\/+$/, '');
+    this.options = { ...defaultOptions, ...options };
+
+    if (this.options.pooling > 0) {
+      this.requestPool = new RequestPool(this.options.pooling);
+    }
   }
 
   public getById<T extends Type = Type, R = ModelType<T>>(
@@ -122,26 +142,28 @@ export class SvapiClient {
     return this.fetchModels<R>(`/${API_VERSION}/${type}`);
   }
 
-  public async fetchModels<R>(path: string): Promise<R | null> {
+  private async fetchModels<R>(path: string): Promise<R | null> {
     const uri = `${this.baseUri}${path}`;
     const cacheKey = `${CACHE_PREFIX}${uri}`;
 
-    const cachedItem = this.cache?.getItem(cacheKey);
+    const cachedItem = this.options.cache?.getItem(cacheKey);
 
     let doc;
 
     if (cachedItem) {
       doc = JSON.parse(cachedItem);
     } else {
-      const res = await this.requestFn(uri);
+      const res = await (this.requestPool
+        ? this.requestPool.put(() => this.requestFn(uri))
+        : this.requestFn(uri));
 
-      if (res.status !== 200) {
+      if (res.status >= 400 || res.status < 200) {
         return null;
       }
 
       doc = await res.json();
 
-      this.cache?.setItem(cacheKey, JSON.stringify(doc));
+      this.options.cache?.setItem(cacheKey, JSON.stringify(doc));
     }
 
     return this.createFromDocument<R>(doc);

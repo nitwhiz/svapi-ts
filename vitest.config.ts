@@ -4,5 +4,6 @@ import { resolve } from 'node:path';
 export default defineConfig({
   test: {
     setupFiles: [resolve(__dirname, 'tests/bootstrap.ts')],
+    watch: false,
   },
 });

@@ -1,5 +1,5 @@
 import { SvapiClient } from '../src/jsonapi/JsonApiClient';
-import { CacheStorage } from '../src/base/CacheStorage';
+import { CacheStorage } from '../src/cache/CacheStorage';
 
 class MockCache implements CacheStorage {
   private values: Record<string, string> = {};
@@ -38,6 +38,8 @@ export const svapiClient = (responses: object | object[]) => {
         json: () => Promise.resolve(jsonObject),
       });
     },
-    new MockCache(),
+    {
+      cache: new MockCache(),
+    },
   );
 };
