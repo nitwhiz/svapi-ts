@@ -32,9 +32,14 @@ jobs:
           run_install: |
             - args: [--frozen-lockfile]
 
-      - run: pnpm build
+      - name: 'Run Tests'
+        run: pnpm test
 
-      - run: pnpm publish --no-git-checks --access public
+      - name: 'Build'
+        run: pnpm build
+
+      - name: 'Publish'
+        run: pnpm publish --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ github.ref_type == 'tag' }}
