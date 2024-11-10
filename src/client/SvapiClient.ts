@@ -187,9 +187,11 @@ export class SvapiClient {
   }
 
   private fetchModels<R>(path: string): Promise<R | null> {
-    return (
-      this.requestPool?.put(() => this.runFetchModels(path)) ??
-      this.runFetchModels(path)
+    return new Promise((resolve) =>
+      resolve(
+        this.requestPool?.put(() => this.runFetchModels(path)) ??
+          this.runFetchModels(path),
+      ),
     );
   }
 
