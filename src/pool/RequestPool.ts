@@ -1,7 +1,12 @@
+interface PoolItem<R> {
+  id: number;
+  promise: Promise<R>;
+}
+
 export class RequestPool {
   private currentId: number = 0;
 
-  private readonly pool: Record<string, Promise<any>> = {};
+  private readonly pool: Record<string, PoolItem<unknown>> = {};
 
   constructor(private maxSize: number = 5) {}
 
@@ -13,28 +18,26 @@ export class RequestPool {
     return Object.keys(this.pool).length;
   }
 
-  private static async wrap<R>(
+  private static wrap<R>(
     id: number,
-    callback: () => Promise<R>,
-  ): Promise<{
-    id: number;
-    result: Awaited<Promise<R>>;
-  }> {
+    promiseFactory: () => Promise<R>,
+  ): PoolItem<R> {
     return {
-      result: await callback(),
+      promise: promiseFactory(),
       id,
     };
   }
 
-  public async put<R>(callback: () => Promise<R>): Promise<R> {
+  public async put<R>(promiseFactory: () => Promise<R>): Promise<R> {
     while (this.size >= this.maxSize) {
       const { id } = await Promise.race(Object.values(this.pool));
       delete this.pool[id];
     }
 
-    const nextId = this.nextId;
+    const poolItem = RequestPool.wrap(this.nextId, promiseFactory);
 
-    return (await (this.pool[nextId] = RequestPool.wrap(nextId, callback)))
-      .result;
+    this.pool[poolItem.id] = poolItem;
+
+    return await poolItem.promise;
   }
 }

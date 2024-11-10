@@ -1,5 +1,5 @@
 import { Category } from './Category';
-import { Attribute, Id, One, ToOne } from '../jsonapi/JsonApiModel';
+import { Attribute, Id, One, ToOne } from '../client/JsonApiModel';
 import { TypeCategory, TypeLanguage } from '../base/Types';
 import { Language } from './Language';
 

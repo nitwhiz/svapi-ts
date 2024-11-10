@@ -1,4 +1,4 @@
-import { SvapiClient } from './JsonApiClient';
+import { SvapiClient } from './SvapiClient';
 
 export const enum RelationshipType {
   TO_ONE,

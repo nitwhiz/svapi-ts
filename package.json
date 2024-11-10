@@ -1,7 +1,7 @@
 {
   "name": "@nitwhiz/svapi-ts",
   "private": false,
-  "version": "3.0.0",
+  "version": "0.1.0",
   "type": "module",
   "files": [
     "dist"

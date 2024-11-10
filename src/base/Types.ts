@@ -1,4 +1,4 @@
-import { SvapiClient } from '../jsonapi/JsonApiClient';
+import { SvapiClient } from '../client/SvapiClient';
 import { Category } from '../model/Category';
 import { CategoryName } from '../model/CategoryName';
 import { GiftTaste } from '../model/GiftTaste';

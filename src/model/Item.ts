@@ -6,7 +6,7 @@ import {
   One,
   ToMany,
   ToOne,
-} from '../jsonapi/JsonApiModel';
+} from '../client/JsonApiModel';
 import { ItemName } from './ItemName';
 import {
   TypeCategory,

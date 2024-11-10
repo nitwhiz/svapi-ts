@@ -1,4 +1,4 @@
-import { Id, Many, ToMany } from '../jsonapi/JsonApiModel';
+import { Id, Many, ToMany } from '../client/JsonApiModel';
 import { Item } from './Item';
 import { TypeItem, TypeRecipeIngredient } from '../base/Types';
 import { RecipeIngredient } from './RecipeIngredient';

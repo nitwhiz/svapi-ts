@@ -1,4 +1,4 @@
-import { Attribute, Id, One, ToOne } from '../jsonapi/JsonApiModel';
+import { Attribute, Id, One, ToOne } from '../client/JsonApiModel';
 import { TypeLanguage, TypeNpc } from '../base/Types';
 import { Language } from './Language';
 import { Npc } from './Npc';

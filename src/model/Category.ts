@@ -1,4 +1,4 @@
-import { Attribute, Id, Many, ToMany } from '../jsonapi/JsonApiModel';
+import { Attribute, Id, Many, ToMany } from '../client/JsonApiModel';
 import { TypeCategoryName, TypeItem } from '../base/Types';
 import { CategoryName } from './CategoryName';
 import { Item } from './Item';

@@ -1,4 +1,4 @@
-import { Attribute, Id, Many, ToMany } from '../jsonapi/JsonApiModel';
+import { Attribute, Id, Many, ToMany } from '../client/JsonApiModel';
 import { NpcName } from './NpcName';
 import { TypeGiftTaste, TypeNpcName } from '../base/Types';
 import { GiftTaste } from './GiftTaste';

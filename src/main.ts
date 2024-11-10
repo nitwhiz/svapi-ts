@@ -2,7 +2,21 @@ import { registerTypes } from './base/Types';
 
 registerTypes();
 
-export { SvapiClient } from './jsonapi/JsonApiClient';
+export type {
+  TypeCategory,
+  TypeCategoryName,
+  TypeGiftTaste,
+  TypeItem,
+  TypeItemName,
+  TypeLanguage,
+  TypeNpc,
+  TypeNpcName,
+  TypeRecipe,
+  TypeRecipeIngredient,
+  TypeRecipeIngredientGroup,
+} from './base/Types';
+
+export { SvapiClient } from './client/SvapiClient';
 
 export * from './model/Category';
 export * from './model/CategoryName';

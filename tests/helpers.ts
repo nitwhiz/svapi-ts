@@ -1,7 +1,7 @@
-import { SvapiClient } from '../src/jsonapi/JsonApiClient';
+import { Options, SvapiClient } from '../src/client/SvapiClient';
 import { CacheStorage } from '../src/cache/CacheStorage';
 
-class MockCache implements CacheStorage {
+export class MockCache implements CacheStorage {
   private values: Record<string, string> = {};
 
   public getItem(key: string): string | null {
@@ -17,7 +17,7 @@ class MockCache implements CacheStorage {
   }
 }
 
-export const svapiClient = (responses: object | object[]) => {
+export const svapiClient = (responses: object | object[], options: Options) => {
   let currentResponseIndex = 0;
 
   return new SvapiClient(
@@ -38,8 +38,6 @@ export const svapiClient = (responses: object | object[]) => {
         json: () => Promise.resolve(jsonObject),
       });
     },
-    {
-      cache: new MockCache(),
-    },
+    options,
   );
 };

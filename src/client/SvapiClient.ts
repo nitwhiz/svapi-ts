@@ -39,13 +39,30 @@ export type RequestFn = (uri: string) => Promise<{
 }>;
 
 export interface Options {
+  /**
+   * cache for requests.
+   * defaults to `null`.
+   */
   cache: CacheStorage | null;
+  /**
+   * amount of parallel requests performed.
+   * can be used to prevent dog-piling in cache and/or on the wire.
+   * defaults to `5`.
+   */
   pooling: number;
+  /**
+   * keep resolved relationships' values. if `false`,
+   * relationships will be requested each time a relationship is resolved.
+   * relationships are still queried from cache if this setting is `false`.
+   * default to `true`
+   */
+  preserveRelationshipValues: boolean;
 }
 
 const defaultOptions: Options = {
   cache: null,
   pooling: 5,
+  preserveRelationshipValues: true,
 };
 
 const API_VERSION = 'v2';
@@ -138,11 +155,13 @@ export class SvapiClient {
 
   public getAll<T extends Type = Type, R = ModelType<T>[]>(
     type: T,
-  ): Promise<R | null> {
-    return this.fetchModels<R>(`/${API_VERSION}/${type}`);
+  ): Promise<R> {
+    return this.fetchModels<R>(`/${API_VERSION}/${type}`).then(
+      (r) => r || ([] as R),
+    );
   }
 
-  private async fetchModels<R>(path: string): Promise<R | null> {
+  private async runFetchModels<R>(path: string): Promise<R | null> {
     const uri = `${this.baseUri}${path}`;
     const cacheKey = `${CACHE_PREFIX}${uri}`;
 
@@ -153,9 +172,7 @@ export class SvapiClient {
     if (cachedItem) {
       doc = JSON.parse(cachedItem);
     } else {
-      const res = await (this.requestPool
-        ? this.requestPool.put(() => this.requestFn(uri))
-        : this.requestFn(uri));
+      const res = await this.requestFn(uri);
 
       if (res.status >= 400 || res.status < 200) {
         return null;
@@ -169,6 +186,13 @@ export class SvapiClient {
     return this.createFromDocument<R>(doc);
   }
 
+  private fetchModels<R>(path: string): Promise<R | null> {
+    return (
+      this.requestPool?.put(() => this.runFetchModels(path)) ??
+      this.runFetchModels(path)
+    );
+  }
+
   private augmentAttributes(model: Model, data: Data): void {
     for (const [prop, attr] of Object.entries(
       SvapiClient.attributeProperties[model.constructor.name] || {},
@@ -177,6 +201,7 @@ export class SvapiClient {
         value:
           attr === 'id' ? data['id'] || null : data.attributes[attr] || null,
         writable: false,
+        enumerable: true,
       });
     }
   }
@@ -185,24 +210,43 @@ export class SvapiClient {
     for (const [prop, rel] of Object.entries(
       SvapiClient.relationshipProperties[model.constructor.name] || {},
     )) {
-      Object.defineProperty(model, prop, {
-        get: (): Model[] | Model | null => {
-          return new Promise((resolve) => {
-            const relatedPath = data.relationships?.[rel.name].links?.related;
+      const relValueKey = this.options.preserveRelationshipValues
+        ? `__jsonApiResolvedRelationshipValue__${rel.name}`
+        : null;
 
-            if (relatedPath) {
-              resolve(
-                this.fetchModels(
-                  typeof relatedPath === 'string'
-                    ? relatedPath
-                    : relatedPath.href,
-                ),
-              );
-            } else {
-              resolve(rel.relationship === RelationshipType.TO_ONE ? null : []);
+      Object.defineProperty(model, prop, {
+        get: async (): Promise<Model[] | Model | null> => {
+          if (relValueKey) {
+            const modelObj = model as Record<string, any>;
+
+            if (modelObj[relValueKey] !== undefined) {
+              return modelObj[relValueKey];
             }
-          });
+          }
+
+          const relatedPath = data.relationships?.[rel.name].links?.related;
+
+          let result: Model | Model[] | null;
+
+          if (relatedPath) {
+            result = await this.fetchModels(
+              typeof relatedPath === 'string' ? relatedPath : relatedPath.href,
+            );
+          } else {
+            result = rel.relationship === RelationshipType.TO_ONE ? null : [];
+          }
+
+          if (relValueKey) {
+            Object.defineProperty(model, relValueKey, {
+              value: result,
+              writable: false,
+              enumerable: false,
+            });
+          }
+
+          return result;
         },
+        enumerable: true,
       });
     }
   }
@@ -228,6 +272,7 @@ export class SvapiClient {
       Object.defineProperty(model, prop, {
         value,
         writable: false,
+        enumerable: true,
       });
     }
   }
