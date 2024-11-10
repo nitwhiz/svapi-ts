@@ -33,7 +33,7 @@ jobs:
             - args: [--frozen-lockfile]
 
       - name: 'Set Package Version'
-        run: pnpm version ${{  github.ref_name }}
+        run: pnpm version ${{  github.ref_name }} --no-git-tag-version
         if: ${{ github.ref_type == 'tag' }}
 
       - name: 'Run Tests'
