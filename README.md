@@ -48,8 +48,8 @@ Relationships of models are requested as soon as you access them:
 
 ```ts
 // get the first item
-const items = await svapiClient.getAll(TypeItem);
+const item = (await svapiClient.getAll(TypeItem))[0];
 
 // get all the item names. the request for that runs now.
-const firstItemNames = await items.names;
+const firstItemNames = await item?.names;
 ```

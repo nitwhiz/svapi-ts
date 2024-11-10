@@ -186,10 +186,10 @@ export class SvapiClient {
     return this.createFromDocument<R>(doc);
   }
 
-  private fetchModels<R>(path: string): Promise<R | null> {
+  private async fetchModels<R>(path: string): Promise<R | null> {
     return (
-      this.requestPool?.put(() => this.runFetchModels(path)) ??
-      this.runFetchModels(path)
+      (await this.requestPool?.put(() => this.runFetchModels(path))) ??
+      (await this.runFetchModels(path))
     );
   }
 
