@@ -31,7 +31,6 @@ The following arguments can be passed to `SvapiClient`:
 | `requestFn`                          | `(uri: string) => Promise<{ status: number; json(): Promise<any>; }>` |               | Required. A function to run requests, should return a `fetch`-ish result.                                                                                                                         |
 | `options`                            | `object`                                                              |               | Optional. See below.                                                                                                                                                                              |
 | `options.cache`                      | `CacheStorage`                                                        | `null`        | Should be a `window.sessionStorage` compatible cache for requests.                                                                                                                                |
-| `options.pooling`                    | `number`                                                              | `5`           | Amount of parallel requests performed.<br/>Can be used to prevent dog-piling in cache and/or on the wire.                                                                                         |
 | `options.preserveRelationshipValues` | `boolean`                                                             | `true`        | Keep resolved relationships' values. if `false`, relationships will be requested each time a relationship is resolved.<br/>Relationships are still queried from cache if this setting is `false`. |
 
 ### Requesting Resources
@@ -48,8 +47,8 @@ Relationships of models are requested as soon as you access them:
 
 ```ts
 // get the first item
-const items = await svapiClient.getAll(TypeItem);
+const item = (await svapiClient.getAll(TypeItem))[0];
 
 // get all the item names. the request for that runs now.
-const firstItemNames = await items.names;
+const firstItemNames = await item?.names;
 ```
