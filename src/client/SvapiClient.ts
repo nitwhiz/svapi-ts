@@ -2,7 +2,6 @@ import { Model, ModelConstructor, RelationshipType } from './JsonApiModel';
 import { Data, Document } from './JsonApi';
 import { CacheStorage } from '../cache/CacheStorage';
 import { ModelType, Type } from '../base/Types';
-import { RequestPool } from '../pool/RequestPool';
 
 interface ConstructorsByType {
   [typeName: string]: ModelConstructor;
@@ -45,12 +44,6 @@ export interface Options {
    */
   cache: CacheStorage | null;
   /**
-   * amount of parallel requests performed.
-   * can be used to prevent dog-piling in cache and/or on the wire.
-   * defaults to `5`.
-   */
-  pooling: number;
-  /**
    * keep resolved relationships' values. if `false`,
    * relationships will be requested each time a relationship is resolved.
    * relationships are still queried from cache if this setting is `false`.
@@ -61,7 +54,6 @@ export interface Options {
 
 const defaultOptions: Options = {
   cache: null,
-  pooling: 5,
   preserveRelationshipValues: true,
 };
 
@@ -131,8 +123,6 @@ export class SvapiClient {
 
   private readonly options: Options;
 
-  private readonly requestPool: RequestPool | null = null;
-
   constructor(
     baseUri: string,
     private readonly requestFn: RequestFn,
@@ -140,10 +130,6 @@ export class SvapiClient {
   ) {
     this.baseUri = baseUri.replace(/\/+$/, '');
     this.options = { ...defaultOptions, ...options };
-
-    if (this.options.pooling > 0) {
-      this.requestPool = new RequestPool(this.options.pooling);
-    }
   }
 
   public getById<T extends Type = Type, R = ModelType<T>>(
@@ -161,7 +147,7 @@ export class SvapiClient {
     );
   }
 
-  private async runFetchModels<R>(path: string): Promise<R | null> {
+  private async fetchModels<R>(path: string): Promise<R | null> {
     const uri = `${this.baseUri}${path}`;
     const cacheKey = `${CACHE_PREFIX}${uri}`;
 
@@ -186,13 +172,6 @@ export class SvapiClient {
     return this.createFromDocument<R>(doc);
   }
 
-  private async fetchModels<R>(path: string): Promise<R | null> {
-    return (
-      (await this.requestPool?.put(() => this.runFetchModels(path))) ??
-      (await this.runFetchModels(path))
-    );
-  }
-
   private augmentAttributes(model: Model, data: Data): void {
     for (const [prop, attr] of Object.entries(
       SvapiClient.attributeProperties[model.constructor.name] || {},
@@ -211,7 +190,7 @@ export class SvapiClient {
       SvapiClient.relationshipProperties[model.constructor.name] || {},
     )) {
       const relValueKey = this.options.preserveRelationshipValues
-        ? `__jsonApiResolvedRelationshipValue__${rel.name}`
+        ? `__jsonapiRelationshipValue_${rel.name}`
         : null;
 
       Object.defineProperty(model, prop, {

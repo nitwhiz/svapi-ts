@@ -13,77 +13,17 @@ import { TypeItem } from '../../src/base/Types';
 
 const getClientsWithPreserveRelValues = (responses: object | object[]) => [
   {
-    config: 'No Cache, No Pooling',
+    config: 'No Cache',
     svapi: svapiClient(responses, {
       cache: null,
-      pooling: 0,
       preserveRelationshipValues: true,
     }),
   },
   {
-    config: 'Cache, No Pooling',
+    config: 'Cache',
     svapi: svapiClient(responses, {
       cache: new MockCache(),
-      pooling: 0,
       preserveRelationshipValues: true,
-    }),
-  },
-  {
-    config: 'No Cache, Pooling',
-    svapi: svapiClient(responses, {
-      cache: null,
-      pooling: 3,
-      preserveRelationshipValues: true,
-    }),
-  },
-  {
-    config: 'Cache, Pooling',
-    svapi: svapiClient(responses, {
-      cache: new MockCache(),
-      pooling: 3,
-      preserveRelationshipValues: true,
-    }),
-  },
-];
-
-const getClientsWithoutPreserveRelValuesAndWithoutCache = (
-  responses: object | object[],
-) => [
-  {
-    config: 'No Pooling',
-    svapi: svapiClient(responses, {
-      cache: null,
-      pooling: 0,
-      preserveRelationshipValues: false,
-    }),
-  },
-  {
-    config: 'Pooling',
-    svapi: svapiClient(responses, {
-      cache: null,
-      pooling: 3,
-      preserveRelationshipValues: false,
-    }),
-  },
-];
-
-const getClientsWithoutPreserveRelValuesAndWithCache = (
-  responses: object | object[],
-) => [
-  {
-    config: 'No Pooling',
-    svapi: svapiClient(responses, {
-      cache: new MockCache(),
-      pooling: 0,
-      preserveRelationshipValues: false,
-    }),
-  },
-  {
-    config: 'Pooling',
-    svapi: svapiClient(responses, {
-      cache: new MockCache(),
-      pooling: 3,
-      preserveRelationshipValues: false,
     }),
   },
 ];
@@ -101,36 +41,53 @@ const relationshipTestClients = [
     ]),
   },
   {
-    name: "Fetch Item Relationships, Don't Preserve Resolved Values, No Cache",
-    clients: getClientsWithoutPreserveRelValuesAndWithoutCache([
-      fixtureSingleItem,
-      fixtureSingleItemNames,
-      fixtureSingleItemNames,
-      fixtureSingleItemNames,
-      fixtureSingleItemCategory,
-      fixtureSingleItemGiftTastes,
-      fixtureSingleItemGiftTastes,
-      fixtureSingleItemGiftTastes,
-      fixtureSingleItemIngredientGroups,
-      fixtureSingleItemIngredientGroups,
-      fixtureSingleItemSourceRecipes,
-      fixtureSingleItemSourceRecipes,
-    ]),
-  },
-  {
-    name: "Fetch Item Relationships, Don't Preserve Resolved Values, Cache",
-    clients: getClientsWithoutPreserveRelValuesAndWithCache([
-      fixtureSingleItem,
-      fixtureSingleItemNames,
-      fixtureSingleItemCategory,
-      fixtureSingleItemGiftTastes,
-      fixtureSingleItemIngredientGroups,
-      fixtureSingleItemSourceRecipes,
-    ]),
+    name: "Fetch Item Relationships, Don't Preserve Resolved Values",
+    clients: [
+      {
+        config: 'No Cache',
+        svapi: svapiClient(
+          [
+            fixtureSingleItem,
+            fixtureSingleItemNames,
+            fixtureSingleItemNames,
+            fixtureSingleItemNames,
+            fixtureSingleItemCategory,
+            fixtureSingleItemGiftTastes,
+            fixtureSingleItemGiftTastes,
+            fixtureSingleItemGiftTastes,
+            fixtureSingleItemIngredientGroups,
+            fixtureSingleItemIngredientGroups,
+            fixtureSingleItemSourceRecipes,
+            fixtureSingleItemSourceRecipes,
+          ],
+          {
+            cache: null,
+            preserveRelationshipValues: false,
+          },
+        ),
+      },
+      {
+        config: 'Cache',
+        svapi: svapiClient(
+          [
+            fixtureSingleItem,
+            fixtureSingleItemNames,
+            fixtureSingleItemCategory,
+            fixtureSingleItemGiftTastes,
+            fixtureSingleItemIngredientGroups,
+            fixtureSingleItemSourceRecipes,
+          ],
+          {
+            cache: new MockCache(),
+            preserveRelationshipValues: false,
+          },
+        ),
+      },
+    ],
   },
 ];
 
-describe('Item Integration', () => {
+describe('Item Model Integration', () => {
   describe('Fetch And Parse Item', () => {
     test.concurrent.for(getClientsWithPreserveRelValues(fixtureSingleItem))(
       'Config: $config',
