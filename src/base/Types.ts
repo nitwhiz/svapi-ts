@@ -37,8 +37,8 @@ const Types = {
   [TypeRecipeIngredientGroup]: RecipeIngredientGroup,
 } as const;
 
-export type Type = keyof typeof Types;
-export type ModelType<T extends Type> =
+export type TypeIdentifier = keyof typeof Types;
+export type ModelType<T extends TypeIdentifier> =
   (typeof Types)[T] extends new () => infer U ? U : never;
 
 export const registerTypes = () => {

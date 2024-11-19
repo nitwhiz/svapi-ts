@@ -1,7 +1,7 @@
 import { Model, ModelConstructor, RelationshipType } from './JsonApiModel';
 import { Data, Document } from './JsonApi';
 import { CacheStorage } from '../cache/CacheStorage';
-import { ModelType, Type } from '../base/Types';
+import { ModelType, TypeIdentifier } from '../base/Types';
 
 interface ConstructorsByType {
   [typeName: string]: ModelConstructor;
@@ -132,14 +132,14 @@ export class SvapiClient {
     this.options = { ...defaultOptions, ...options };
   }
 
-  public getById<T extends Type = Type, R = ModelType<T>>(
+  public getById<T extends TypeIdentifier = TypeIdentifier, R = ModelType<T>>(
     type: T,
     id: string,
   ): Promise<R | null> {
     return this.fetchModels<R>(`/${API_VERSION}/${type}/${id}`);
   }
 
-  public getAll<T extends Type = Type, R = ModelType<T>[]>(
+  public getAll<T extends TypeIdentifier = TypeIdentifier, R = ModelType<T>[]>(
     type: T,
   ): Promise<R> {
     return this.fetchModels<R>(`/${API_VERSION}/${type}`).then(

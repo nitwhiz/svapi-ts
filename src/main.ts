@@ -3,6 +3,8 @@ import { registerTypes } from './base/Types';
 registerTypes();
 
 export type {
+  TypeIdentifier,
+  ModelType,
   TypeCategory,
   TypeCategoryName,
   TypeGiftTaste,
