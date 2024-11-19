@@ -218,8 +218,8 @@ export class SvapiClient {
           if (relValueKey) {
             Object.defineProperty(model, relValueKey, {
               value: result,
-              writable: false,
-              enumerable: false,
+              writable: true,
+              enumerable: true,
             });
           }
 
