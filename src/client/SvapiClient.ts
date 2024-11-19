@@ -179,7 +179,7 @@ export class SvapiClient {
       Object.defineProperty(model, prop, {
         value:
           attr === 'id' ? data['id'] || null : data.attributes[attr] || null,
-        writable: false,
+        writable: true,
         enumerable: true,
       });
     }
@@ -250,7 +250,7 @@ export class SvapiClient {
 
       Object.defineProperty(model, prop, {
         value,
-        writable: false,
+        writable: true,
         enumerable: true,
       });
     }
