@@ -131,20 +131,22 @@ export class SvapiClient {
   public getById<T extends TypeIdentifier = TypeIdentifier, R = ModelType<T>>(
     type: T,
     id: string,
+    include: string[] = [],
   ): Promise<R | null> {
-    return this.fetchModels<R>(
-      `/${API_VERSION}/${type}/${id}`,
-      this.getRelatedProperties(type),
-    );
+    return this.fetchModels<R>(`/${API_VERSION}/${type}/${id}`, [
+      ...this.getRelatedProperties(type),
+      ...include,
+    ]);
   }
 
   public getAll<T extends TypeIdentifier = TypeIdentifier, R = ModelType<T>[]>(
     type: T,
+    include: string[] = [],
   ): Promise<R> {
-    return this.fetchModels<R>(
-      `/${API_VERSION}/${type}`,
-      this.getRelatedProperties(type),
-    ).then((r) => r || ([] as R));
+    return this.fetchModels<R>(`/${API_VERSION}/${type}`, [
+      ...this.getRelatedProperties(type),
+      ...include,
+    ]).then((r) => r || ([] as R));
   }
 
   private getRelatedProperties(relationTypeName: string): string[] {
