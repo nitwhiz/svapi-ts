@@ -1,0 +1,525 @@
+{
+  "data": {
+    "type": "categories",
+    "id": "b88d0b15-6dd8-5439-957e-9d4006164da4",
+    "attributes": { "internalId": "-9" },
+    "relationships": {
+      "items": {
+        "links": {
+          "related": "/v2/categories/b88d0b15-6dd8-5439-957e-9d4006164da4/items",
+          "self": "/v2/categories/b88d0b15-6dd8-5439-957e-9d4006164da4/relationships/items"
+        },
+        "data": [
+          { "type": "items", "id": "e538e535-c9e0-5592-872c-c9dd3e581af1" },
+          { "type": "items", "id": "fe988377-8bcf-5b2a-8c5e-497e511b575d" },
+          { "type": "items", "id": "aa250ab1-ccd1-500a-9d50-0f9e5881795e" },
+          { "type": "items", "id": "e738cd76-b132-532f-a1c0-1a336afe5cf0" },
+          { "type": "items", "id": "699a4ae2-9b7d-53a7-9924-ff80262525ed" },
+          { "type": "items", "id": "d3003f16-d471-5fa5-9491-1a0bcc1f9312" },
+          { "type": "items", "id": "dbacf369-1962-5618-83a4-c60986b6e75f" },
+          { "type": "items", "id": "ca129fb3-c2f3-5cc6-aa71-63a44c19fc79" },
+          { "type": "items", "id": "54aae86a-39ab-50ad-9b76-1c4d44c05b24" },
+          { "type": "items", "id": "857fe828-1162-5f9a-a796-46b24168b0ef" },
+          { "type": "items", "id": "9e69ebb4-3549-5457-bf92-434359e6ae65" },
+          { "type": "items", "id": "5d75caf0-4ba4-5266-bc8b-f13c51a72792" },
+          { "type": "items", "id": "2d652132-4acb-5110-b67f-c22d6acb54f7" },
+          { "type": "items", "id": "570003cd-5476-5d75-8179-1d637bfeb35e" },
+          { "type": "items", "id": "7d4a08db-49c7-50f6-9119-ab8ce4bb20a2" },
+          { "type": "items", "id": "ed23ef3e-e5a0-5627-a8ed-df977fe4a665" },
+          { "type": "items", "id": "0e6e488e-68d2-5b2b-ac4a-0f832512da5b" },
+          { "type": "items", "id": "011d4536-2012-56da-ad6c-67fe287e410e" },
+          { "type": "items", "id": "2495d0f4-d772-582e-894f-2a41af6d4ee5" },
+          { "type": "items", "id": "1b0a9e93-1d6b-502d-833f-99c1167da33c" },
+          { "type": "items", "id": "7076d56d-b832-591c-9925-5b7ba69d2dcb" },
+          { "type": "items", "id": "a35f3c25-66b7-5e28-ab4a-c099d7b4c156" },
+          { "type": "items", "id": "7afee51a-572a-540b-b2df-7d85939570a0" },
+          { "type": "items", "id": "d156ec10-2bb6-512e-acab-b268fd97579d" },
+          { "type": "items", "id": "cdc04f3f-367b-58d6-8a30-0cbb8e156c5a" },
+          { "type": "items", "id": "6f0d0787-c2e7-517f-b81c-d2056340027e" },
+          { "type": "items", "id": "34752321-8f72-5f81-8cce-7f5d0213a442" },
+          { "type": "items", "id": "2ad48d99-117c-5841-81b0-30a998506d38" },
+          { "type": "items", "id": "89b123f4-3e50-57a1-9eaf-2be97d382e0e" },
+          { "type": "items", "id": "901bab7c-c3d1-503c-bc97-89bae2988a8f" },
+          { "type": "items", "id": "b40b6e58-baa1-5cc8-853a-72e1596a5d0b" },
+          { "type": "items", "id": "e35858e9-3c08-5b9c-bcdf-5af5eec9ced5" },
+          { "type": "items", "id": "a217248b-f6d1-5585-afcd-1baa95b4dd87" },
+          { "type": "items", "id": "7ec220cb-077b-5099-90ca-b9a289e0f1df" },
+          { "type": "items", "id": "6f2afdde-3e79-5076-87bf-53e53939925d" },
+          { "type": "items", "id": "be9352f5-ff44-5c19-b5b7-8b4f275d7cbf" },
+          { "type": "items", "id": "7ab86107-cad1-5a2f-a5f2-1cda2c8836df" },
+          { "type": "items", "id": "837cf6f2-3360-56e4-b17e-fa86b359d8b1" },
+          { "type": "items", "id": "2aa8604c-d289-5e05-a3f3-84b2ac00b29e" },
+          { "type": "items", "id": "849d6c5f-309e-5dd7-b35a-e2f0cb75d40d" },
+          { "type": "items", "id": "079e4a6b-a987-5a55-8668-cffe9ab4466c" },
+          { "type": "items", "id": "db5e8056-1614-5f70-ac40-71bdb649b7b8" },
+          { "type": "items", "id": "be6cca34-caf0-5653-bc00-d9c3e921652b" },
+          { "type": "items", "id": "d036fbc4-3627-5695-8b49-7c46a0ad58bc" },
+          { "type": "items", "id": "51b9a15a-bb15-5c6b-a106-7c39203d4a5e" },
+          { "type": "items", "id": "37a50cd4-224f-5e67-bba0-1384d5d0706c" },
+          { "type": "items", "id": "003c63d2-c511-5051-b8d4-28cdbc08ad6c" },
+          { "type": "items", "id": "6a9f5e31-fccb-5301-a0e0-496c06f1890c" },
+          { "type": "items", "id": "84ab6ab3-171a-543b-9d39-f18e88f4596e" },
+          { "type": "items", "id": "2234c352-f728-56a3-8950-6bf109a2ea31" },
+          { "type": "items", "id": "5f90e58b-81be-5da5-ab81-d623dca50120" },
+          { "type": "items", "id": "1d1291c5-ce70-5965-9475-6069c5da1684" },
+          { "type": "items", "id": "f47f3827-31df-54bf-8d3f-3d7e86212d0a" },
+          { "type": "items", "id": "f00bf25f-8ee8-5ddd-a5d9-7f80ca831056" },
+          { "type": "items", "id": "f20c35d6-48fc-5f6c-868b-047745c84061" },
+          { "type": "items", "id": "e5c99149-bf3d-50b1-bea1-a7c9edd43dd6" },
+          { "type": "items", "id": "6fee789a-c13e-5518-ab4d-7b6539c4e4dc" },
+          { "type": "items", "id": "c5c35041-416f-59b2-b16b-9208f6c07a9f" },
+          { "type": "items", "id": "4cd1b123-d80c-527d-97df-e8bfa8458da7" },
+          { "type": "items", "id": "8bb3eecd-2a88-5f64-9566-045a00849efc" },
+          { "type": "items", "id": "0cdd21ec-9535-547e-8511-f3354cac73db" },
+          { "type": "items", "id": "1d028006-9362-5bbc-9043-aef0b2525eb1" },
+          { "type": "items", "id": "88f656af-e7fa-5112-a4cb-20d157bf7733" },
+          { "type": "items", "id": "d25009d1-d39c-5cc1-8807-005ddefab3de" },
+          { "type": "items", "id": "6c336cd4-badc-5d2a-b7b6-6fcaa96dfe75" },
+          { "type": "items", "id": "5a6f1a18-6122-5ab1-8398-c47fcb1d831a" },
+          { "type": "items", "id": "44b7743e-26f7-5b32-9ab5-a3232daa0fc0" },
+          { "type": "items", "id": "1433f7c3-e3fb-5394-b55b-ec6bcfa9823a" },
+          { "type": "items", "id": "52417c6b-1310-5bac-87be-bfa084b9bcef" },
+          { "type": "items", "id": "a6a7ab91-4440-57b2-b4ed-60a9b74982f3" },
+          { "type": "items", "id": "9a5ac413-0423-503a-8489-60a557c8d01f" },
+          { "type": "items", "id": "a2f7fe80-de62-5ef7-b29f-1d1607fd0b3f" },
+          { "type": "items", "id": "71e6f1a7-4872-5853-9070-ca0d7fdaf415" },
+          { "type": "items", "id": "b32a1a1d-18e9-5aa6-a180-0434a963ee18" },
+          { "type": "items", "id": "47472f48-7526-5355-a828-1f086cc9cdfa" },
+          { "type": "items", "id": "fc81796e-15e8-59d2-b011-aac2f7db3f07" },
+          { "type": "items", "id": "75462140-a916-5aea-8410-2aeb78e498f2" },
+          { "type": "items", "id": "0af31a8c-23e3-5abc-a03f-9b0dff2e1500" },
+          { "type": "items", "id": "e2567c9a-bb06-547b-ab7d-2ff7579531ff" },
+          { "type": "items", "id": "b61177a2-c332-5e07-b3ac-663dc79e4443" },
+          { "type": "items", "id": "a9446415-61b8-57e2-b916-7b7c58eee3e5" },
+          { "type": "items", "id": "f4c63b25-d850-5f20-bea2-b371273a0db8" },
+          { "type": "items", "id": "d939da7b-5a38-50d0-8a3e-3d6608c5d5bb" },
+          { "type": "items", "id": "ea32cc62-a745-52eb-a730-fd05b089a0ee" },
+          { "type": "items", "id": "07038ba1-0880-5675-bf03-1a3a4158aedf" },
+          { "type": "items", "id": "8a54456d-6d11-5ca3-a975-4b4664c296f5" },
+          { "type": "items", "id": "81895c29-5431-5efe-81a5-5858e820fc06" },
+          { "type": "items", "id": "f3b6aaf5-b2c2-545a-b8d5-e9ea35996994" },
+          { "type": "items", "id": "19cf686d-bc54-5201-9c7f-c323a06f0497" },
+          { "type": "items", "id": "9e6846fe-5b28-5278-9875-1d7528d59ad2" },
+          { "type": "items", "id": "f6fabcd1-4e4b-52ba-920b-729511f7e24d" },
+          { "type": "items", "id": "bb79873e-0b52-56ab-88d9-78e9ccb9584c" },
+          { "type": "items", "id": "e76fc57b-9a66-5d22-bc92-7b375114f695" },
+          { "type": "items", "id": "3b320c94-2484-5e7e-be4b-fa255f93d1b0" },
+          { "type": "items", "id": "b74ab187-e450-5668-803c-4d9708de7de1" },
+          { "type": "items", "id": "e4b4154c-ebc2-5856-99e6-6f8c48a3e8f7" },
+          { "type": "items", "id": "8cf79869-9158-5a02-9157-1e6737958e88" },
+          { "type": "items", "id": "675cc0a2-f064-581b-99cc-b25be13e4228" },
+          { "type": "items", "id": "59fefdea-eed2-5962-a7f8-3c627a4ef796" },
+          { "type": "items", "id": "8ffabd61-d23a-5518-be79-8470c087d1ce" },
+          { "type": "items", "id": "cb12812c-b1fc-5faa-811e-72b238cab150" },
+          { "type": "items", "id": "230ac0cd-e4da-5e87-be52-8a54aad3f216" },
+          { "type": "items", "id": "848d628c-1c4c-5a03-a2f8-986c1e2b0ae6" },
+          { "type": "items", "id": "28ffd2c0-ee83-50c0-bb7c-11dc90f3c762" },
+          { "type": "items", "id": "439a4fe1-90a6-5c4c-8264-9d0f55b4aa79" },
+          { "type": "items", "id": "bddffdbd-a642-50fe-9dd0-bc59cf712687" },
+          { "type": "items", "id": "1934b0ef-d751-590a-8d23-b6352fff936d" },
+          { "type": "items", "id": "8d8d8c62-ee14-52ff-917f-89092dc92484" },
+          { "type": "items", "id": "771e1b20-1978-5908-9187-20ff126d2af1" },
+          { "type": "items", "id": "1b3cdfa1-3163-5e98-80c3-a41aa506a338" },
+          { "type": "items", "id": "a174d696-65c7-55dc-8f60-6970dda36d39" },
+          { "type": "items", "id": "a7fc457a-582f-5cc6-8a3d-97af9fda5145" },
+          { "type": "items", "id": "48c14fd1-19dc-534d-98ce-0cfdf38bd571" },
+          { "type": "items", "id": "d87849dd-2181-5ab5-9268-66d21af1fbf9" },
+          { "type": "items", "id": "a3f89140-3b66-5717-b1ce-aca1c6aabd5e" },
+          { "type": "items", "id": "c582e6b2-7406-5f19-aebf-0ae7bdac2365" },
+          { "type": "items", "id": "8369457f-c5dd-5cbe-9e69-b49a399d2b1a" },
+          { "type": "items", "id": "11a70186-aac2-56f2-81ac-b348a9e73f52" },
+          { "type": "items", "id": "2de7c24f-a3d8-5dad-b9ca-84d9a28bf17c" },
+          { "type": "items", "id": "ceb0a113-988f-590c-a7d6-1b2d89acb8ca" },
+          { "type": "items", "id": "cc852c27-4218-5ef5-968d-34f0171416c8" },
+          { "type": "items", "id": "be6c8988-51df-5e25-8ca2-860a8ebf9eb3" },
+          { "type": "items", "id": "e0c7cf14-c7fb-5086-af72-1fa9ee37c2ea" },
+          { "type": "items", "id": "e713cc8b-37f6-5e9b-8017-8f10bf2b4bb9" },
+          { "type": "items", "id": "fc62e3c4-8cfa-5e9c-807f-67dac427fd94" },
+          { "type": "items", "id": "f1254254-7817-5234-8692-c709f6f07948" },
+          { "type": "items", "id": "1994c1d9-9d8f-5190-b73a-abc005be9aa9" },
+          { "type": "items", "id": "e5a1f05c-6594-513e-a6cb-1efc60b89f4f" },
+          { "type": "items", "id": "a086dac1-e1d4-549f-9da3-22d151ee4cc2" },
+          { "type": "items", "id": "0aac5dca-709d-5609-991c-784ed73adfa9" },
+          { "type": "items", "id": "a6903264-2186-564f-8ba9-b33c3323c42d" },
+          { "type": "items", "id": "c78c02bd-4b3a-5ea2-9346-e03636f88060" },
+          { "type": "items", "id": "aaf9a70d-b887-56bc-b8a3-18ec023d08ad" },
+          { "type": "items", "id": "d17e9fde-77ef-5511-8d8c-77859b1bacb5" },
+          { "type": "items", "id": "eb217635-d204-55f8-9016-f6c7973d73a1" },
+          { "type": "items", "id": "04f9b4ad-047f-5560-a98b-7ecd05a2b3fa" },
+          { "type": "items", "id": "5cca3997-b110-5f1d-8280-b7f5724263e8" },
+          { "type": "items", "id": "01c73f8d-b1da-5e25-a33f-9994933c8b55" },
+          { "type": "items", "id": "6f3cf4cc-9a85-5cb5-8336-30878c03e2d5" },
+          { "type": "items", "id": "bb9be02c-c050-5c18-9184-c44801bae69f" },
+          { "type": "items", "id": "8495dd4d-4f28-5bb0-91ec-49db11b19958" },
+          { "type": "items", "id": "300152ae-0e4b-5344-83df-44e2b4314c4d" },
+          { "type": "items", "id": "15c98d70-7731-5799-8f8a-ef96119778e8" },
+          { "type": "items", "id": "50abe0a6-e098-59b2-9912-8d2382138a41" },
+          { "type": "items", "id": "b0c1da46-72b3-5cd3-8b20-040b17650804" },
+          { "type": "items", "id": "d038f663-6129-5c6c-bc5b-67f3f67b7214" },
+          { "type": "items", "id": "17d0e0ab-4435-5303-a6a7-25033a32896a" },
+          { "type": "items", "id": "0733a76f-93b4-573f-ba36-f6b29d9cb408" },
+          { "type": "items", "id": "74bdbde5-1b8a-5e13-b046-1c42cea6d7bb" },
+          { "type": "items", "id": "51253a63-7d04-558f-ac60-4254934637ae" },
+          { "type": "items", "id": "c66c2b3c-544e-5bd0-97a2-aa719e7f616f" },
+          { "type": "items", "id": "41348878-33f0-5fc3-aa8a-904e74c25b40" },
+          { "type": "items", "id": "7f51ce4c-b3d0-5270-baab-a98a9c79e044" },
+          { "type": "items", "id": "0bc82355-bba5-585e-8089-f4a87c604c36" },
+          { "type": "items", "id": "20853d87-444b-5253-9a3f-fb4e3e66d37f" },
+          { "type": "items", "id": "20c0df4b-43f6-5c20-bb90-60c7eaa59a78" },
+          { "type": "items", "id": "bb98eb81-60d8-599a-9a68-131b5095fa07" },
+          { "type": "items", "id": "b9cdcab6-e088-5db5-a11f-55811897f756" },
+          { "type": "items", "id": "8fb42ba1-0a47-5722-9c77-5f01362d5e06" },
+          { "type": "items", "id": "94aef22f-40b3-51dd-bd58-4da02c1d5a1b" },
+          { "type": "items", "id": "5232ffc5-c2d5-559c-9622-9812505d57e8" },
+          { "type": "items", "id": "e62f2b83-a7fb-5d79-933a-4e9067ea8a8d" },
+          { "type": "items", "id": "8cd45d7e-016b-5b3b-8493-89abf12d19aa" },
+          { "type": "items", "id": "71809777-fe40-5f9a-b881-ad6393efcd90" },
+          { "type": "items", "id": "220f60e6-08ab-5df1-8fd1-a6266d935cb8" },
+          { "type": "items", "id": "66f23859-29d3-5f99-bef9-4002648f3d32" },
+          { "type": "items", "id": "0d851fd2-0d2d-55a5-8887-111925b2c02d" },
+          { "type": "items", "id": "1eb9ba42-22db-5160-900c-7022d289434f" },
+          { "type": "items", "id": "54396125-b0d8-5503-ab3f-4a5b968056d4" },
+          { "type": "items", "id": "891eeb55-a7f1-5b3a-95e7-314d616fda21" },
+          { "type": "items", "id": "f25e367a-3fd8-56bd-8c51-3907338c5a11" },
+          { "type": "items", "id": "c036ef8a-db0a-5764-9c2b-30ad2c88e7f2" },
+          { "type": "items", "id": "81413208-e24e-5c93-8c83-8df98ce9a508" },
+          { "type": "items", "id": "ce61fd45-e9ee-5cee-ba90-b9fd1314f6c8" },
+          { "type": "items", "id": "62f30f3f-f5fd-5608-aa2b-2a9c5271bd53" },
+          { "type": "items", "id": "092ff82a-2865-5658-b26f-102f566f370c" },
+          { "type": "items", "id": "b88fa1b3-0a99-5127-8ddf-222c4500b1bb" },
+          { "type": "items", "id": "4d215f49-ed52-573f-8f83-ae2785ef3f56" },
+          { "type": "items", "id": "76171306-f9f6-5958-9949-826bbdb9c8f5" },
+          { "type": "items", "id": "e359f8b4-c54e-549b-928c-3a400dfb4cd8" },
+          { "type": "items", "id": "bc2ab1e0-583f-584b-9fb9-413c1a6e6cc7" },
+          { "type": "items", "id": "9e5ee728-028d-5863-84ac-1a2587a5bc17" },
+          { "type": "items", "id": "6694b8f6-c5c8-5d92-ad3b-29116ada341e" }
+        ]
+      },
+      "names": {
+        "links": {
+          "related": "/v2/categories/b88d0b15-6dd8-5439-957e-9d4006164da4/names",
+          "self": "/v2/categories/b88d0b15-6dd8-5439-957e-9d4006164da4/relationships/names"
+        },
+        "data": [
+          {
+            "type": "categoryNames",
+            "id": "539d0a05-7df8-585e-9e92-9fc12c1b2577"
+          },
+          {
+            "type": "categoryNames",
+            "id": "21c6df2d-a7e9-5802-883d-34f9067b985e"
+          },
+          {
+            "type": "categoryNames",
+            "id": "27cd0580-106f-579a-acad-fd37affc240d"
+          },
+          {
+            "type": "categoryNames",
+            "id": "20fa5791-78c7-5f70-9289-df912e1da2d3"
+          },
+          {
+            "type": "categoryNames",
+            "id": "67a0fa2c-5e3f-5f78-9544-948e3c4156e3"
+          },
+          {
+            "type": "categoryNames",
+            "id": "85f1dd01-0203-5c46-b166-28d32d8b3705"
+          },
+          {
+            "type": "categoryNames",
+            "id": "ad37f9ef-48f3-5c2a-b196-263b08643e90"
+          },
+          {
+            "type": "categoryNames",
+            "id": "34028508-654f-5355-b71d-9f8aecc1ff65"
+          },
+          {
+            "type": "categoryNames",
+            "id": "1496fe8c-c0a5-5867-9c7a-ce4a4ee0477d"
+          },
+          {
+            "type": "categoryNames",
+            "id": "c4ee8192-8c94-5ecd-bf97-f03056d9911c"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "categoryNames",
+      "id": "539d0a05-7df8-585e-9e92-9fc12c1b2577",
+      "attributes": { "name": "" },
+      "relationships": {
+        "category": {
+          "links": {
+            "related": "/v2/categoryNames/539d0a05-7df8-585e-9e92-9fc12c1b2577/category",
+            "self": "/v2/categoryNames/539d0a05-7df8-585e-9e92-9fc12c1b2577/relationships/category"
+          },
+          "data": {
+            "type": "categories",
+            "id": "b88d0b15-6dd8-5439-957e-9d4006164da4"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/categoryNames/539d0a05-7df8-585e-9e92-9fc12c1b2577/language",
+            "self": "/v2/categoryNames/539d0a05-7df8-585e-9e92-9fc12c1b2577/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "e33cd106-49ec-55ee-af73-80d5cd58b2cc"
+          }
+        }
+      }
+    },
+    {
+      "type": "categoryNames",
+      "id": "21c6df2d-a7e9-5802-883d-34f9067b985e",
+      "attributes": { "name": "" },
+      "relationships": {
+        "category": {
+          "links": {
+            "related": "/v2/categoryNames/21c6df2d-a7e9-5802-883d-34f9067b985e/category",
+            "self": "/v2/categoryNames/21c6df2d-a7e9-5802-883d-34f9067b985e/relationships/category"
+          },
+          "data": {
+            "type": "categories",
+            "id": "b88d0b15-6dd8-5439-957e-9d4006164da4"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/categoryNames/21c6df2d-a7e9-5802-883d-34f9067b985e/language",
+            "self": "/v2/categoryNames/21c6df2d-a7e9-5802-883d-34f9067b985e/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "2707add9-0eed-51fe-8971-1d21b9ccb672"
+          }
+        }
+      }
+    },
+    {
+      "type": "categoryNames",
+      "id": "27cd0580-106f-579a-acad-fd37affc240d",
+      "attributes": { "name": "" },
+      "relationships": {
+        "category": {
+          "links": {
+            "related": "/v2/categoryNames/27cd0580-106f-579a-acad-fd37affc240d/category",
+            "self": "/v2/categoryNames/27cd0580-106f-579a-acad-fd37affc240d/relationships/category"
+          },
+          "data": {
+            "type": "categories",
+            "id": "b88d0b15-6dd8-5439-957e-9d4006164da4"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/categoryNames/27cd0580-106f-579a-acad-fd37affc240d/language",
+            "self": "/v2/categoryNames/27cd0580-106f-579a-acad-fd37affc240d/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "9bfcaddd-388a-5ccd-aa30-f21e6273df4c"
+          }
+        }
+      }
+    },
+    {
+      "type": "categoryNames",
+      "id": "20fa5791-78c7-5f70-9289-df912e1da2d3",
+      "attributes": { "name": "" },
+      "relationships": {
+        "category": {
+          "links": {
+            "related": "/v2/categoryNames/20fa5791-78c7-5f70-9289-df912e1da2d3/category",
+            "self": "/v2/categoryNames/20fa5791-78c7-5f70-9289-df912e1da2d3/relationships/category"
+          },
+          "data": {
+            "type": "categories",
+            "id": "b88d0b15-6dd8-5439-957e-9d4006164da4"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/categoryNames/20fa5791-78c7-5f70-9289-df912e1da2d3/language",
+            "self": "/v2/categoryNames/20fa5791-78c7-5f70-9289-df912e1da2d3/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "aa1bb459-38cb-5ac2-842e-c55b9b588cf3"
+          }
+        }
+      }
+    },
+    {
+      "type": "categoryNames",
+      "id": "67a0fa2c-5e3f-5f78-9544-948e3c4156e3",
+      "attributes": { "name": "" },
+      "relationships": {
+        "category": {
+          "links": {
+            "related": "/v2/categoryNames/67a0fa2c-5e3f-5f78-9544-948e3c4156e3/category",
+            "self": "/v2/categoryNames/67a0fa2c-5e3f-5f78-9544-948e3c4156e3/relationships/category"
+          },
+          "data": {
+            "type": "categories",
+            "id": "b88d0b15-6dd8-5439-957e-9d4006164da4"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/categoryNames/67a0fa2c-5e3f-5f78-9544-948e3c4156e3/language",
+            "self": "/v2/categoryNames/67a0fa2c-5e3f-5f78-9544-948e3c4156e3/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "4beabd80-40e5-5fe3-bca3-f1b374cd3dbd"
+          }
+        }
+      }
+    },
+    {
+      "type": "categoryNames",
+      "id": "85f1dd01-0203-5c46-b166-28d32d8b3705",
+      "attributes": { "name": "" },
+      "relationships": {
+        "category": {
+          "links": {
+            "related": "/v2/categoryNames/85f1dd01-0203-5c46-b166-28d32d8b3705/category",
+            "self": "/v2/categoryNames/85f1dd01-0203-5c46-b166-28d32d8b3705/relationships/category"
+          },
+          "data": {
+            "type": "categories",
+            "id": "b88d0b15-6dd8-5439-957e-9d4006164da4"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/categoryNames/85f1dd01-0203-5c46-b166-28d32d8b3705/language",
+            "self": "/v2/categoryNames/85f1dd01-0203-5c46-b166-28d32d8b3705/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "060b7142-04a0-58d1-aba0-7398acd6b574"
+          }
+        }
+      }
+    },
+    {
+      "type": "categoryNames",
+      "id": "ad37f9ef-48f3-5c2a-b196-263b08643e90",
+      "attributes": { "name": "" },
+      "relationships": {
+        "category": {
+          "links": {
+            "related": "/v2/categoryNames/ad37f9ef-48f3-5c2a-b196-263b08643e90/category",
+            "self": "/v2/categoryNames/ad37f9ef-48f3-5c2a-b196-263b08643e90/relationships/category"
+          },
+          "data": {
+            "type": "categories",
+            "id": "b88d0b15-6dd8-5439-957e-9d4006164da4"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/categoryNames/ad37f9ef-48f3-5c2a-b196-263b08643e90/language",
+            "self": "/v2/categoryNames/ad37f9ef-48f3-5c2a-b196-263b08643e90/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "60f0cfe3-b04a-5975-a7bc-6f384b0aed74"
+          }
+        }
+      }
+    },
+    {
+      "type": "categoryNames",
+      "id": "34028508-654f-5355-b71d-9f8aecc1ff65",
+      "attributes": { "name": "" },
+      "relationships": {
+        "category": {
+          "links": {
+            "related": "/v2/categoryNames/34028508-654f-5355-b71d-9f8aecc1ff65/category",
+            "self": "/v2/categoryNames/34028508-654f-5355-b71d-9f8aecc1ff65/relationships/category"
+          },
+          "data": {
+            "type": "categories",
+            "id": "b88d0b15-6dd8-5439-957e-9d4006164da4"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/categoryNames/34028508-654f-5355-b71d-9f8aecc1ff65/language",
+            "self": "/v2/categoryNames/34028508-654f-5355-b71d-9f8aecc1ff65/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "dc79216c-c319-5e40-80b0-076db245b4b2"
+          }
+        }
+      }
+    },
+    {
+      "type": "categoryNames",
+      "id": "1496fe8c-c0a5-5867-9c7a-ce4a4ee0477d",
+      "attributes": { "name": "" },
+      "relationships": {
+        "category": {
+          "links": {
+            "related": "/v2/categoryNames/1496fe8c-c0a5-5867-9c7a-ce4a4ee0477d/category",
+            "self": "/v2/categoryNames/1496fe8c-c0a5-5867-9c7a-ce4a4ee0477d/relationships/category"
+          },
+          "data": {
+            "type": "categories",
+            "id": "b88d0b15-6dd8-5439-957e-9d4006164da4"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/categoryNames/1496fe8c-c0a5-5867-9c7a-ce4a4ee0477d/language",
+            "self": "/v2/categoryNames/1496fe8c-c0a5-5867-9c7a-ce4a4ee0477d/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "92b16445-f366-583d-9e30-e5e3498b4ec1"
+          }
+        }
+      }
+    },
+    {
+      "type": "categoryNames",
+      "id": "c4ee8192-8c94-5ecd-bf97-f03056d9911c",
+      "attributes": { "name": "" },
+      "relationships": {
+        "category": {
+          "links": {
+            "related": "/v2/categoryNames/c4ee8192-8c94-5ecd-bf97-f03056d9911c/category",
+            "self": "/v2/categoryNames/c4ee8192-8c94-5ecd-bf97-f03056d9911c/relationships/category"
+          },
+          "data": {
+            "type": "categories",
+            "id": "b88d0b15-6dd8-5439-957e-9d4006164da4"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/categoryNames/c4ee8192-8c94-5ecd-bf97-f03056d9911c/language",
+            "self": "/v2/categoryNames/c4ee8192-8c94-5ecd-bf97-f03056d9911c/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "64be1bc5-d86c-52c8-9a03-6478bf0a7a87"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "author": "nitwhiz",
+    "license": "wtfpl",
+    "license-url": "http://www.wtfpl.net/about/"
+  }
+}

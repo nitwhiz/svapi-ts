@@ -1,15 +1,18 @@
 import { describe, expect, test } from 'vitest';
 import fixtureSingleItem from '../fixtures/single-item.json';
+import fixtureSingleItemWithIncludes from '../fixtures/single-item-include-names-and-giftTastes.json';
 import fixtureSingleItemCategory from '../fixtures/single-item-category.json';
 import fixtureSingleItemGiftTastes from '../fixtures/single-item-giftTastes.json';
 import fixtureSingleItemIngredientGroups from '../fixtures/single-item-ingredientGroups.json';
 import fixtureSingleItemNames from '../fixtures/single-item-names.json';
 import fixtureSingleItemSourceRecipes from '../fixtures/single-item-sourceRecipes.json';
+import fixtureSingleCategoryWithNames from '../fixtures/single-category-include-names.json';
 import { MockCache, svapiClient } from '../helpers';
 import { Category } from '../../src/model/Category';
 import { GiftTaste } from '../../src/model/GiftTaste';
 import { ItemName } from '../../src/model/ItemName';
-import { TypeItem } from '../../src/base/Types';
+import { TypeItem } from '../../src/base/TypeNames';
+import { Item } from '../../src/model/Item';
 
 const getClientsWithPreserveRelValues = (responses: object | object[]) => [
   {
@@ -117,6 +120,58 @@ describe('Item Model Integration', () => {
         );
       },
     );
+  });
+
+  describe('Fetch And Parse Item With Includes', () => {
+    test('Single Item', async () => {
+      const svapi = svapiClient([fixtureSingleItemWithIncludes], {
+        cache: null,
+        preserveRelationshipValues: true,
+      });
+
+      const item = await svapi.getById(
+        TypeItem,
+        '8562d2c0-a721-58a5-ac15-114b384f5062',
+      );
+
+      expect(item).toBeInstanceOf(Item);
+
+      expect(await item?.names).toHaveLength(10);
+    });
+
+    test('Item Category Via Relationships', async () => {
+      const svapi = svapiClient(
+        [
+          fixtureSingleItemWithIncludes,
+          fixtureSingleItemWithIncludes,
+          fixtureSingleCategoryWithNames,
+        ],
+        {
+          cache: null,
+          preserveRelationshipValues: true,
+        },
+      );
+
+      const item = await svapi.getById(
+        TypeItem,
+        '8562d2c0-a721-58a5-ac15-114b384f5062',
+      );
+
+      expect(item).toBeInstanceOf(Item);
+
+      const itemNames = await item?.names;
+
+      expect(itemNames).toHaveLength(10);
+
+      const firstItemName = itemNames![0];
+
+      const firstItemNameItem = await firstItemName.item;
+
+      const firstItemNameItemCategory = await firstItemNameItem!.category;
+
+      expect(firstItemNameItemCategory).toBeInstanceOf(Category);
+      expect(await firstItemNameItemCategory?.names).toHaveLength(10);
+    });
   });
 
   for (const { name, clients } of relationshipTestClients) {

@@ -2,21 +2,71 @@
   "data": {
     "type": "categories",
     "id": "19a298b4-e367-583a-ac30-620f0e3199fa",
-    "attributes": {
-      "internalId": "-80"
-    },
+    "attributes": { "internalId": "-80" },
     "relationships": {
       "items": {
         "links": {
           "related": "/v2/categories/19a298b4-e367-583a-ac30-620f0e3199fa/items",
           "self": "/v2/categories/19a298b4-e367-583a-ac30-620f0e3199fa/relationships/items"
-        }
+        },
+        "data": [
+          { "type": "items", "id": "23363195-d4a8-5c33-8d4c-167d98287cb8" },
+          { "type": "items", "id": "197a11d1-3f0c-5d05-ac38-cdadc61f3489" },
+          { "type": "items", "id": "b9c10708-64fe-5880-a0e6-f24c23d42342" },
+          { "type": "items", "id": "8562d2c0-a721-58a5-ac15-114b384f5062" },
+          { "type": "items", "id": "ee2914e6-0df2-5645-b118-d549b5416f2e" },
+          { "type": "items", "id": "1ca7d098-7b65-5d06-8e69-8af13271de8a" },
+          { "type": "items", "id": "c03a886c-20b0-577e-8ea6-eb1d993b24cb" },
+          { "type": "items", "id": "70da8781-e7f4-52b3-ad43-f1658eeeb9ef" }
+        ]
       },
       "names": {
         "links": {
           "related": "/v2/categories/19a298b4-e367-583a-ac30-620f0e3199fa/names",
           "self": "/v2/categories/19a298b4-e367-583a-ac30-620f0e3199fa/relationships/names"
-        }
+        },
+        "data": [
+          {
+            "type": "categoryNames",
+            "id": "76dd4eed-3d5d-5969-ba11-009cf3f9c29b"
+          },
+          {
+            "type": "categoryNames",
+            "id": "029a7dd9-5b2b-5351-9061-ac81b4f4a4bf"
+          },
+          {
+            "type": "categoryNames",
+            "id": "e1e043d5-aa34-5e63-b245-8e00cca401cc"
+          },
+          {
+            "type": "categoryNames",
+            "id": "6237a82e-2e9d-557d-bab2-e53c748a7123"
+          },
+          {
+            "type": "categoryNames",
+            "id": "6e59081f-7acc-56f4-8312-b26ed61dba7c"
+          },
+          {
+            "type": "categoryNames",
+            "id": "644603db-8fc3-5b65-8987-c609a6faa22b"
+          },
+          {
+            "type": "categoryNames",
+            "id": "0d83130a-f387-58a2-a15f-ac340c810824"
+          },
+          {
+            "type": "categoryNames",
+            "id": "9a516c3f-79bd-5a13-9a33-f9dc447dd626"
+          },
+          {
+            "type": "categoryNames",
+            "id": "5e8eb35b-417e-5b8a-b572-3e858733c024"
+          },
+          {
+            "type": "categoryNames",
+            "id": "c57653dc-e086-5139-9e2a-4b9f5da568f2"
+          }
+        ]
       }
     }
   },

@@ -1,5 +1,4 @@
 import { Attribute, Id, Many, ToMany } from '../client/JsonApiModel';
-import { TypeCategoryName, TypeItem } from '../base/Types';
 import { CategoryName } from './CategoryName';
 import { Item } from './Item';
 
@@ -10,9 +9,9 @@ export class Category {
   @Attribute()
   public readonly internalId?: string;
 
-  @ToMany(TypeCategoryName)
+  @ToMany(__TYPE_CATEGORY_NAME)
   public readonly names?: Many<CategoryName>;
 
-  @ToMany(TypeItem)
+  @ToMany(__TYPE_ITEM)
   public readonly items?: Many<Item>;
 }

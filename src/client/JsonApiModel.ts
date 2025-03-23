@@ -23,7 +23,7 @@ export const Attribute = (attrName?: string) => {
 };
 
 export const Relationship = (
-  type: string,
+  typeName: string,
   relationship: RelationshipType,
   relName?: string,
 ) => {
@@ -31,17 +31,19 @@ export const Relationship = (
     SvapiClient.registerRelationshipProperty(
       target.constructor.name,
       propertyKey,
-      type,
-      relName || propertyKey,
-      relationship,
+      {
+        typeName,
+        relationshipType: relationship,
+        propertyName: relName || propertyKey,
+      },
     );
 };
 
-export const ToOne = (type: string, relName?: string) =>
-  Relationship(type, RelationshipType.TO_ONE, relName);
+export const ToOne = (typeName: string, relName?: string) =>
+  Relationship(typeName, RelationshipType.TO_ONE, relName);
 
-export const ToMany = (type: string, relName?: string) =>
-  Relationship(type, RelationshipType.TO_MANY, relName);
+export const ToMany = (typeName: string, relName?: string) =>
+  Relationship(typeName, RelationshipType.TO_MANY, relName);
 
 export type One<M> = Promise<M>;
 

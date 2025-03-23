@@ -1,7 +1,6 @@
 import { Attribute, Id, One, ToOne } from '../client/JsonApiModel';
 import { Recipe } from './Recipe';
 import { RecipeIngredientGroup } from './RecipeIngredientGroup';
-import { TypeRecipe, TypeRecipeIngredientGroup } from '../base/Types';
 
 export class RecipeIngredient {
   @Id()
@@ -10,9 +9,9 @@ export class RecipeIngredient {
   @Attribute()
   public readonly quantity?: number;
 
-  @ToOne(TypeRecipe)
+  @ToOne(__TYPE_RECIPE)
   public readonly recipe?: One<Recipe>;
 
-  @ToOne(TypeRecipeIngredientGroup)
+  @ToOne(__TYPE_RECIPE_INGREDIENT_GROUP)
   public readonly ingredientGroup?: One<RecipeIngredientGroup>;
 }

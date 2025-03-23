@@ -7,13 +7,15 @@ interface ConstructorsByType {
   [typeName: string]: ModelConstructor;
 }
 
+interface RelationshipDefinition {
+  typeName: string;
+  propertyName: string;
+  relationshipType: RelationshipType;
+}
+
 interface RelationshipProperties {
   [className: string]: {
-    [prop: string]: {
-      type: string;
-      name: string;
-      relationship: RelationshipType;
-    };
+    [prop: string]: RelationshipDefinition;
   };
 }
 
@@ -58,7 +60,7 @@ const defaultOptions: Options = {
 };
 
 const API_VERSION = 'v2';
-const CACHE_PREFIX = `svapi.${API_VERSION}.cache.`;
+const CACHE_PREFIX = `svapi.${API_VERSION}.`;
 
 export class SvapiClient {
   private static readonly modelConstructorByType: ConstructorsByType = {};
@@ -88,19 +90,13 @@ export class SvapiClient {
   public static registerRelationshipProperty(
     className: string,
     propertyKey: string,
-    type: string,
-    relName: string,
-    relationship: RelationshipType,
+    rel: RelationshipDefinition,
   ): void {
     if (!SvapiClient.relationshipProperties[className]) {
       SvapiClient.relationshipProperties[className] = {};
     }
 
-    SvapiClient.relationshipProperties[className][propertyKey] = {
-      type,
-      name: relName,
-      relationship,
-    };
+    SvapiClient.relationshipProperties[className][propertyKey] = rel;
   }
 
   public static registerMetaProperty(
@@ -136,19 +132,34 @@ export class SvapiClient {
     type: T,
     id: string,
   ): Promise<R | null> {
-    return this.fetchModels<R>(`/${API_VERSION}/${type}/${id}`);
+    return this.fetchModels<R>(
+      `/${API_VERSION}/${type}/${id}`,
+      this.getRelatedProperties(type),
+    );
   }
 
   public getAll<T extends TypeIdentifier = TypeIdentifier, R = ModelType<T>[]>(
     type: T,
   ): Promise<R> {
-    return this.fetchModels<R>(`/${API_VERSION}/${type}`).then(
-      (r) => r || ([] as R),
-    );
+    return this.fetchModels<R>(
+      `/${API_VERSION}/${type}`,
+      this.getRelatedProperties(type),
+    ).then((r) => r || ([] as R));
   }
 
-  private async fetchModels<R>(path: string): Promise<R | null> {
-    const uri = `${this.baseUri}${path}`;
+  private getRelatedProperties(relationTypeName: string): string[] {
+    return Object.values(
+      SvapiClient.relationshipProperties[
+        SvapiClient.modelConstructorByType[relationTypeName].name
+      ],
+    ).map((p) => p.propertyName);
+  }
+
+  private async fetchModels<R>(
+    path: string,
+    include: string[] = [],
+  ): Promise<R | null> {
+    const uri = `${this.baseUri}${path}?include=${include.join(',')}`;
     const cacheKey = `${CACHE_PREFIX}${uri}`;
 
     const cachedItem = this.options.cache?.getItem(cacheKey);
@@ -178,23 +189,43 @@ export class SvapiClient {
     )) {
       Object.defineProperty(model, prop, {
         value:
-          attr === 'id' ? data['id'] || null : data.attributes[attr] || null,
+          attr === 'id'
+            ? data['id'] || undefined
+            : data.attributes[attr] || undefined,
         writable: true,
         enumerable: true,
       });
     }
   }
 
-  private augmentRelationships(model: Model, data: Data): void {
+  private findDataInIncludes(
+    type: string,
+    id: string,
+    included: Data[],
+  ): Data | null {
+    for (const i of included) {
+      if (i.type === type && i.id === id) {
+        return i;
+      }
+    }
+
+    return null;
+  }
+
+  private augmentRelationships(
+    model: Model,
+    data: Data,
+    included: Data[],
+  ): void {
     for (const [prop, rel] of Object.entries(
       SvapiClient.relationshipProperties[model.constructor.name] || {},
     )) {
       const relValueKey = this.options.preserveRelationshipValues
-        ? `__jsonapiRelationshipValue_${rel.name}`
+        ? `__jsonapiRelationshipValue_${rel.propertyName}`
         : null;
 
       Object.defineProperty(model, prop, {
-        get: async (): Promise<Model[] | Model | null> => {
+        get: async (): Promise<Model[] | Model | undefined> => {
           if (relValueKey) {
             const modelObj = model as Record<string, any>;
 
@@ -203,16 +234,71 @@ export class SvapiClient {
             }
           }
 
-          const relatedPath = data.relationships?.[rel.name].links?.related;
+          let result: Model | Model[] | undefined;
 
-          let result: Model | Model[] | null;
+          const relData = data.relationships?.[rel.propertyName].data;
 
-          if (relatedPath) {
-            result = await this.fetchModels(
-              typeof relatedPath === 'string' ? relatedPath : relatedPath.href,
-            );
-          } else {
-            result = rel.relationship === RelationshipType.TO_ONE ? null : [];
+          if (
+            rel.relationshipType === RelationshipType.TO_ONE &&
+            !Array.isArray(relData)
+          ) {
+            if (relData?.id) {
+              const includeData = this.findDataInIncludes(
+                rel.typeName,
+                relData.id,
+                included,
+              );
+
+              if (includeData) {
+                result = this.createModelFromData(includeData, included);
+              }
+            }
+          } else if (
+            rel.relationshipType === RelationshipType.TO_MANY &&
+            Array.isArray(relData)
+          ) {
+            result = relData
+              .map((relDataItem) => {
+                if (relDataItem.id) {
+                  const includeData = this.findDataInIncludes(
+                    rel.typeName,
+                    relDataItem.id,
+                    included,
+                  );
+
+                  if (includeData) {
+                    return this.createModelFromData(includeData, included);
+                  }
+                }
+
+                return undefined;
+              })
+              .filter((item) => Boolean(item));
+          }
+
+          if (
+            result === undefined ||
+            (included.length === 0 &&
+              Array.isArray(result) &&
+              result.length === 0)
+          ) {
+            const relatedPath =
+              data.relationships?.[rel.propertyName].links?.related;
+
+            if (relatedPath) {
+              result =
+                (await this.fetchModels(
+                  typeof relatedPath === 'string'
+                    ? relatedPath
+                    : relatedPath.href,
+                  this.getRelatedProperties(rel.typeName),
+                )) || undefined;
+            } else {
+              result =
+                rel.relationshipType === RelationshipType.TO_ONE
+                  ? undefined
+                  : [];
+            }
           }
 
           if (relValueKey) {
@@ -256,17 +342,20 @@ export class SvapiClient {
     }
   }
 
-  private createModelFromData(data: Data): Model | null {
+  private createModelFromData(
+    data: Data,
+    included: Data[] = [],
+  ): Model | undefined {
     const Ctor = SvapiClient.modelConstructorByType[data.type];
 
     if (!Ctor) {
-      return null;
+      return undefined;
     }
 
     const model = new Ctor();
 
     this.augmentAttributes(model, data);
-    this.augmentRelationships(model, data);
+    this.augmentRelationships(model, data, included);
     this.augmentMeta(model, data);
 
     return model;
@@ -275,10 +364,10 @@ export class SvapiClient {
   private createFromDocument<R>(doc: Document): R | null {
     if (Array.isArray(doc.data)) {
       return doc.data
-        .map((d) => this.createModelFromData(d))
+        .map((d) => this.createModelFromData(d, doc.included))
         .filter((m) => Boolean(m)) as R;
     }
 
-    return this.createModelFromData(doc.data) as R;
+    return this.createModelFromData(doc.data, doc.included) as R;
   }
 }

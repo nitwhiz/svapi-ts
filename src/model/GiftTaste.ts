@@ -1,6 +1,5 @@
 import { Attribute, Id, One, ToOne } from '../client/JsonApiModel';
 import { Npc } from './Npc';
-import { TypeItem, TypeNpc } from '../base/Types';
 import { Item } from './Item';
 
 export class GiftTaste {
@@ -10,9 +9,9 @@ export class GiftTaste {
   @Attribute()
   public readonly taste?: string;
 
-  @ToOne(TypeNpc)
+  @ToOne(__TYPE_NPC)
   public readonly npc?: One<Npc>;
 
-  @ToOne(TypeItem)
+  @ToOne(__TYPE_ITEM)
   public readonly item?: One<Item>;
 }

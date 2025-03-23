@@ -8,13 +8,6 @@ import {
   ToOne,
 } from '../client/JsonApiModel';
 import { ItemName } from './ItemName';
-import {
-  TypeCategory,
-  TypeGiftTaste,
-  TypeItemName,
-  TypeRecipe,
-  TypeRecipeIngredientGroup,
-} from '../base/Types';
 import { Category } from './Category';
 import { GiftTaste } from './GiftTaste';
 import { RecipeIngredientGroup } from './RecipeIngredientGroup';
@@ -33,19 +26,19 @@ export class Item {
   @Attribute()
   public readonly flags?: string[];
 
-  @ToMany(TypeItemName)
+  @ToMany(__TYPE_ITEM_NAME)
   public readonly names?: Many<ItemName>;
 
-  @ToOne(TypeCategory)
+  @ToOne(__TYPE_CATEGORY)
   public readonly category?: One<Category>;
 
-  @ToMany(TypeGiftTaste)
+  @ToMany(__TYPE_GIFT_TASTE)
   public readonly giftTastes?: Many<GiftTaste>;
 
-  @ToMany(TypeRecipeIngredientGroup)
+  @ToMany(__TYPE_RECIPE_INGREDIENT_GROUP)
   public readonly ingredientGroups?: Many<RecipeIngredientGroup>;
 
-  @ToMany(TypeRecipe)
+  @ToMany(__TYPE_RECIPE)
   public readonly sourceRecipes?: Many<Recipe>;
 
   @Link('texture')

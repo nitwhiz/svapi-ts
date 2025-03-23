@@ -1,4 +1,3 @@
-import { SvapiClient } from '../client/SvapiClient';
 import { Category } from '../model/Category';
 import { CategoryName } from '../model/CategoryName';
 import { GiftTaste } from '../model/GiftTaste';
@@ -10,20 +9,22 @@ import { NpcName } from '../model/NpcName';
 import { Recipe } from '../model/Recipe';
 import { RecipeIngredient } from '../model/RecipeIngredient';
 import { RecipeIngredientGroup } from '../model/RecipeIngredientGroup';
+import { SvapiClient } from '../client/SvapiClient';
+import {
+  TypeCategory,
+  TypeCategoryName,
+  TypeGiftTaste,
+  TypeItem,
+  TypeItemName,
+  TypeLanguage,
+  TypeNpc,
+  TypeNpcName,
+  TypeRecipe,
+  TypeRecipeIngredient,
+  TypeRecipeIngredientGroup,
+} from './TypeNames';
 
-export const TypeCategory = 'categories';
-export const TypeCategoryName = 'categoryNames';
-export const TypeGiftTaste = 'giftTastes';
-export const TypeItem = 'items';
-export const TypeItemName = 'itemNames';
-export const TypeLanguage = 'languages';
-export const TypeNpc = 'npcs';
-export const TypeNpcName = 'npcNames';
-export const TypeRecipe = 'recipes';
-export const TypeRecipeIngredient = 'recipeIngredients';
-export const TypeRecipeIngredientGroup = 'recipeIngredientGroups';
-
-const Types = {
+const TypeClassByName = {
   [TypeCategory]: Category,
   [TypeCategoryName]: CategoryName,
   [TypeGiftTaste]: GiftTaste,
@@ -37,12 +38,13 @@ const Types = {
   [TypeRecipeIngredientGroup]: RecipeIngredientGroup,
 } as const;
 
-export type TypeIdentifier = keyof typeof Types;
+export type TypeIdentifier = keyof typeof TypeClassByName;
+
 export type ModelType<T extends TypeIdentifier> =
-  (typeof Types)[T] extends new () => infer U ? U : never;
+  (typeof TypeClassByName)[T] extends new () => infer U ? U : never;
 
 export const registerTypes = () => {
-  for (const e of Object.entries(Types)) {
+  for (const e of Object.entries(TypeClassByName)) {
     SvapiClient.registerModel(e[0], e[1]);
   }
 };

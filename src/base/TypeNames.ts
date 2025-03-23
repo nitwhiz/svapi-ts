@@ -1,0 +1,11 @@
+export const TypeCategory = 'categories';
+export const TypeCategoryName = 'categoryNames';
+export const TypeGiftTaste = 'giftTastes';
+export const TypeItem = 'items';
+export const TypeItemName = 'itemNames';
+export const TypeLanguage = 'languages';
+export const TypeNpc = 'npcs';
+export const TypeNpcName = 'npcNames';
+export const TypeRecipe = 'recipes';
+export const TypeRecipeIngredient = 'recipeIngredients';
+export const TypeRecipeIngredientGroup = 'recipeIngredientGroups';

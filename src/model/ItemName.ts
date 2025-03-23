@@ -1,5 +1,4 @@
 import { Attribute, Id, One, ToOne } from '../client/JsonApiModel';
-import { TypeItem, TypeLanguage } from '../base/Types';
 import { Item } from './Item';
 import { Language } from './Language';
 
@@ -10,9 +9,9 @@ export class ItemName {
   @Attribute()
   public readonly name?: string;
 
-  @ToOne(TypeItem)
+  @ToOne(__TYPE_ITEM)
   public readonly item?: One<Item>;
 
-  @ToOne(TypeLanguage)
+  @ToOne(__TYPE_LANGUAGE)
   public readonly language?: One<Language>;
 }

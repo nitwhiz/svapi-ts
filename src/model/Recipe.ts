@@ -1,7 +1,6 @@
 import { Attribute, Id, Many, ToMany } from '../client/JsonApiModel';
 import { RecipeIngredient } from './RecipeIngredient';
 import { Item } from './Item';
-import { TypeItem, TypeRecipeIngredient } from '../base/Types';
 
 export class Recipe {
   @Id()
@@ -16,9 +15,9 @@ export class Recipe {
   @Attribute()
   public readonly outputYield?: number;
 
-  @ToMany(TypeRecipeIngredient)
+  @ToMany(__TYPE_RECIPE_INGREDIENT)
   public readonly ingredients?: Many<RecipeIngredient>;
 
-  @ToMany(TypeItem)
+  @ToMany(__TYPE_ITEM)
   public readonly outputItems?: Many<Item>;
 }

@@ -3,8 +3,6 @@ import { registerTypes } from './base/Types';
 registerTypes();
 
 export type {
-  TypeIdentifier,
-  ModelType,
   TypeCategory,
   TypeCategoryName,
   TypeGiftTaste,
@@ -16,7 +14,9 @@ export type {
   TypeRecipe,
   TypeRecipeIngredient,
   TypeRecipeIngredientGroup,
-} from './base/Types';
+} from './base/TypeNames';
+
+export type { TypeIdentifier, ModelType } from './base/Types';
 
 export { SvapiClient } from './client/SvapiClient';
 

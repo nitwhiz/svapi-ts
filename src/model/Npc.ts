@@ -1,6 +1,5 @@
 import { Attribute, Id, Many, ToMany } from '../client/JsonApiModel';
 import { NpcName } from './NpcName';
-import { TypeGiftTaste, TypeNpcName } from '../base/Types';
 import { GiftTaste } from './GiftTaste';
 
 export class Npc {
@@ -16,9 +15,9 @@ export class Npc {
   @Attribute()
   public readonly birthdayDay?: number;
 
-  @ToMany(TypeNpcName)
+  @ToMany(__TYPE_NPC_NAME)
   public readonly names?: Many<NpcName>;
 
-  @ToMany(TypeGiftTaste)
+  @ToMany(__TYPE_GIFT_TASTE)
   public readonly giftTastes?: Many<GiftTaste>;
 }

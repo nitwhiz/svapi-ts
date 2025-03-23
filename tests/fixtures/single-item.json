@@ -12,31 +12,184 @@
         "links": {
           "related": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/category",
           "self": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/relationships/category"
+        },
+        "data": {
+          "type": "categories",
+          "id": "19a298b4-e367-583a-ac30-620f0e3199fa"
         }
       },
       "giftTastes": {
         "links": {
           "related": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/giftTastes",
           "self": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/relationships/giftTastes"
-        }
+        },
+        "data": [
+          {
+            "type": "giftTastes",
+            "id": "63110e44-cde4-57ec-aa27-fe9fe580b002"
+          },
+          {
+            "type": "giftTastes",
+            "id": "aea94c66-7cbd-5c62-a051-62c2b8e719a5"
+          },
+          {
+            "type": "giftTastes",
+            "id": "1a440eeb-c388-5813-a7ea-92e7229d91f6"
+          },
+          {
+            "type": "giftTastes",
+            "id": "4aa7c41f-76bd-5a8f-82a9-114e866c1190"
+          },
+          {
+            "type": "giftTastes",
+            "id": "de7b149d-a8af-54b5-9f81-1be140d87dbc"
+          },
+          {
+            "type": "giftTastes",
+            "id": "2622a23f-7e31-5f0d-8508-11cc292668e9"
+          },
+          {
+            "type": "giftTastes",
+            "id": "302fc2cc-55d0-56fc-b05f-40cbe54b51d2"
+          },
+          {
+            "type": "giftTastes",
+            "id": "3e46d25e-fedb-552a-8aec-bf042aa0970d"
+          },
+          {
+            "type": "giftTastes",
+            "id": "ba0d493d-5ced-5adc-98a5-bc1ebb44c95b"
+          },
+          {
+            "type": "giftTastes",
+            "id": "d104d4a2-6093-581c-8698-99cba3d59f32"
+          },
+          {
+            "type": "giftTastes",
+            "id": "52a615e2-204e-5264-9e2b-94403eb0e166"
+          },
+          {
+            "type": "giftTastes",
+            "id": "f2e52e02-c547-5b6f-95e6-3d85f9135691"
+          },
+          {
+            "type": "giftTastes",
+            "id": "1e397fba-f255-5156-8938-7b22452c407d"
+          },
+          {
+            "type": "giftTastes",
+            "id": "5b9e54b6-a669-5a04-a9b1-d951a8304907"
+          },
+          {
+            "type": "giftTastes",
+            "id": "69ac47e3-a363-58b4-957b-b998745bc376"
+          },
+          {
+            "type": "giftTastes",
+            "id": "847b8be9-ce8b-5ca0-ba9d-2b2fd80c9f00"
+          },
+          {
+            "type": "giftTastes",
+            "id": "1d40da35-5882-5144-9885-c17708f8b6cd"
+          },
+          {
+            "type": "giftTastes",
+            "id": "ce6fe7c8-34ed-5a17-ae15-d712ba86791b"
+          },
+          {
+            "type": "giftTastes",
+            "id": "a78b92a5-abcd-53cc-983c-c80b031c5450"
+          },
+          {
+            "type": "giftTastes",
+            "id": "3d41b16f-cac7-588c-8622-caae91d430f1"
+          },
+          {
+            "type": "giftTastes",
+            "id": "6a160bb8-32e7-5198-a8cb-4cd39638f327"
+          },
+          {
+            "type": "giftTastes",
+            "id": "cde894a9-6b8e-5f56-adba-83dbcc8514b8"
+          },
+          {
+            "type": "giftTastes",
+            "id": "4a26c080-0d47-5043-a205-bd51f6075bfd"
+          },
+          {
+            "type": "giftTastes",
+            "id": "95d810cb-1534-5129-922e-11981382237f"
+          },
+          {
+            "type": "giftTastes",
+            "id": "36ea091e-789f-5bc4-99c8-8848f0d34c67"
+          },
+          {
+            "type": "giftTastes",
+            "id": "ec55c661-d242-5780-bff2-dff24f3d2a2f"
+          },
+          {
+            "type": "giftTastes",
+            "id": "6b0f6755-5ef8-5b5b-bdcb-1925934c174d"
+          },
+          {
+            "type": "giftTastes",
+            "id": "22c41fd1-d99e-52ca-8821-ce2d410b35c0"
+          },
+          {
+            "type": "giftTastes",
+            "id": "7a25abdb-544b-5af0-b070-bbaf6919e72e"
+          },
+          {
+            "type": "giftTastes",
+            "id": "9a92740b-9c73-5565-b589-6ffe78713a87"
+          },
+          {
+            "type": "giftTastes",
+            "id": "6a33514d-82d3-5ab9-b6ee-04117087fbb4"
+          },
+          {
+            "type": "giftTastes",
+            "id": "fab6afc3-6df3-514c-ad21-1eb544550d4f"
+          },
+          {
+            "type": "giftTastes",
+            "id": "6751a77f-bd35-5e43-82b3-3177a2d3f4a6"
+          },
+          { "type": "giftTastes", "id": "7fdf33c3-d7cb-5b37-9d4a-bd38a1d985c9" }
+        ]
       },
       "ingredientGroups": {
         "links": {
           "related": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/ingredientGroups",
           "self": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/relationships/ingredientGroups"
-        }
+        },
+        "data": []
       },
       "names": {
         "links": {
           "related": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/names",
           "self": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/relationships/names"
-        }
+        },
+        "data": [
+          { "type": "itemNames", "id": "83a0cb29-9190-5b47-b4c5-c4d61841485e" },
+          { "type": "itemNames", "id": "7b97801f-cb61-59d6-8dd4-d448c0215369" },
+          { "type": "itemNames", "id": "d12a1772-91d1-5fcf-96f8-c9df6b7e19bc" },
+          { "type": "itemNames", "id": "afbecedd-04b8-510b-9567-4967f56dd3c1" },
+          { "type": "itemNames", "id": "150a4562-435b-5d00-ba3f-22c9f3517a2d" },
+          { "type": "itemNames", "id": "ab1109a3-3299-5e13-b1a6-d72a893dcc62" },
+          { "type": "itemNames", "id": "12b76957-2ee8-5fab-9c28-f5e9ec0fd953" },
+          { "type": "itemNames", "id": "1b45a0af-589a-5ca4-83e9-f564c66d6891" },
+          { "type": "itemNames", "id": "29d7510f-36e1-5a52-be18-626a8aaafe68" },
+          { "type": "itemNames", "id": "a0ba1f72-86b7-5e22-b4d9-0a199b72b46f" }
+        ]
       },
       "sourceRecipes": {
         "links": {
           "related": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/sourceRecipes",
           "self": "/v2/items/8562d2c0-a721-58a5-ac15-114b384f5062/relationships/sourceRecipes"
-        }
+        },
+        "data": []
       }
     },
     "links": {

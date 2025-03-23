@@ -1,5 +1,4 @@
 import { Attribute, Id, One, ToOne } from '../client/JsonApiModel';
-import { TypeLanguage, TypeNpc } from '../base/Types';
 import { Language } from './Language';
 import { Npc } from './Npc';
 
@@ -10,9 +9,9 @@ export class NpcName {
   @Attribute()
   public readonly name?: string;
 
-  @ToOne(TypeNpc)
+  @ToOne(__TYPE_NPC)
   public readonly npc?: One<Npc>;
 
-  @ToOne(TypeLanguage)
+  @ToOne(__TYPE_LANGUAGE)
   public readonly language?: One<Language>;
 }

@@ -37,4 +37,5 @@ export interface Document {
   links?: Links;
   data: Data[] | Data;
   meta?: Meta;
+  included?: Data[];
 }

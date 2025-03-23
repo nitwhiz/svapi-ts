@@ -2,84 +2,27 @@
   "data": [
     {
       "type": "itemNames",
-      "id": "afbecedd-04b8-510b-9567-4967f56dd3c1",
-      "attributes": {
-        "name": "Tulpe"
-      },
+      "id": "83a0cb29-9190-5b47-b4c5-c4d61841485e",
+      "attributes": { "name": "Tulip" },
       "relationships": {
         "item": {
           "links": {
-            "related": "/v2/itemNames/afbecedd-04b8-510b-9567-4967f56dd3c1/item",
-            "self": "/v2/itemNames/afbecedd-04b8-510b-9567-4967f56dd3c1/relationships/item"
+            "related": "/v2/itemNames/83a0cb29-9190-5b47-b4c5-c4d61841485e/item",
+            "self": "/v2/itemNames/83a0cb29-9190-5b47-b4c5-c4d61841485e/relationships/item"
+          },
+          "data": {
+            "type": "items",
+            "id": "8562d2c0-a721-58a5-ac15-114b384f5062"
           }
         },
         "language": {
           "links": {
-            "related": "/v2/itemNames/afbecedd-04b8-510b-9567-4967f56dd3c1/language",
-            "self": "/v2/itemNames/afbecedd-04b8-510b-9567-4967f56dd3c1/relationships/language"
-          }
-        }
-      }
-    },
-    {
-      "type": "itemNames",
-      "id": "150a4562-435b-5d00-ba3f-22c9f3517a2d",
-      "attributes": {
-        "name": "Tulipano"
-      },
-      "relationships": {
-        "item": {
-          "links": {
-            "related": "/v2/itemNames/150a4562-435b-5d00-ba3f-22c9f3517a2d/item",
-            "self": "/v2/itemNames/150a4562-435b-5d00-ba3f-22c9f3517a2d/relationships/item"
-          }
-        },
-        "language": {
-          "links": {
-            "related": "/v2/itemNames/150a4562-435b-5d00-ba3f-22c9f3517a2d/language",
-            "self": "/v2/itemNames/150a4562-435b-5d00-ba3f-22c9f3517a2d/relationships/language"
-          }
-        }
-      }
-    },
-    {
-      "type": "itemNames",
-      "id": "ab1109a3-3299-5e13-b1a6-d72a893dcc62",
-      "attributes": {
-        "name": "Lale"
-      },
-      "relationships": {
-        "item": {
-          "links": {
-            "related": "/v2/itemNames/ab1109a3-3299-5e13-b1a6-d72a893dcc62/item",
-            "self": "/v2/itemNames/ab1109a3-3299-5e13-b1a6-d72a893dcc62/relationships/item"
-          }
-        },
-        "language": {
-          "links": {
-            "related": "/v2/itemNames/ab1109a3-3299-5e13-b1a6-d72a893dcc62/language",
-            "self": "/v2/itemNames/ab1109a3-3299-5e13-b1a6-d72a893dcc62/relationships/language"
-          }
-        }
-      }
-    },
-    {
-      "type": "itemNames",
-      "id": "29d7510f-36e1-5a52-be18-626a8aaafe68",
-      "attributes": {
-        "name": "Тюльпан"
-      },
-      "relationships": {
-        "item": {
-          "links": {
-            "related": "/v2/itemNames/29d7510f-36e1-5a52-be18-626a8aaafe68/item",
-            "self": "/v2/itemNames/29d7510f-36e1-5a52-be18-626a8aaafe68/relationships/item"
-          }
-        },
-        "language": {
-          "links": {
-            "related": "/v2/itemNames/29d7510f-36e1-5a52-be18-626a8aaafe68/language",
-            "self": "/v2/itemNames/29d7510f-36e1-5a52-be18-626a8aaafe68/relationships/language"
+            "related": "/v2/itemNames/83a0cb29-9190-5b47-b4c5-c4d61841485e/language",
+            "self": "/v2/itemNames/83a0cb29-9190-5b47-b4c5-c4d61841485e/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "64be1bc5-d86c-52c8-9a03-6478bf0a7a87"
           }
         }
       }
@@ -87,20 +30,26 @@
     {
       "type": "itemNames",
       "id": "7b97801f-cb61-59d6-8dd4-d448c0215369",
-      "attributes": {
-        "name": "Tulipa"
-      },
+      "attributes": { "name": "Tulipa" },
       "relationships": {
         "item": {
           "links": {
             "related": "/v2/itemNames/7b97801f-cb61-59d6-8dd4-d448c0215369/item",
             "self": "/v2/itemNames/7b97801f-cb61-59d6-8dd4-d448c0215369/relationships/item"
+          },
+          "data": {
+            "type": "items",
+            "id": "8562d2c0-a721-58a5-ac15-114b384f5062"
           }
         },
         "language": {
           "links": {
             "related": "/v2/itemNames/7b97801f-cb61-59d6-8dd4-d448c0215369/language",
             "self": "/v2/itemNames/7b97801f-cb61-59d6-8dd4-d448c0215369/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "9bfcaddd-388a-5ccd-aa30-f21e6273df4c"
           }
         }
       }
@@ -108,41 +57,107 @@
     {
       "type": "itemNames",
       "id": "d12a1772-91d1-5fcf-96f8-c9df6b7e19bc",
-      "attributes": {
-        "name": "Tulipán"
-      },
+      "attributes": { "name": "Tulipán" },
       "relationships": {
         "item": {
           "links": {
             "related": "/v2/itemNames/d12a1772-91d1-5fcf-96f8-c9df6b7e19bc/item",
             "self": "/v2/itemNames/d12a1772-91d1-5fcf-96f8-c9df6b7e19bc/relationships/item"
+          },
+          "data": {
+            "type": "items",
+            "id": "8562d2c0-a721-58a5-ac15-114b384f5062"
           }
         },
         "language": {
           "links": {
             "related": "/v2/itemNames/d12a1772-91d1-5fcf-96f8-c9df6b7e19bc/language",
             "self": "/v2/itemNames/d12a1772-91d1-5fcf-96f8-c9df6b7e19bc/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "60f0cfe3-b04a-5975-a7bc-6f384b0aed74"
           }
         }
       }
     },
     {
       "type": "itemNames",
-      "id": "a0ba1f72-86b7-5e22-b4d9-0a199b72b46f",
-      "attributes": {
-        "name": "Tulipe"
-      },
+      "id": "afbecedd-04b8-510b-9567-4967f56dd3c1",
+      "attributes": { "name": "Tulpe" },
       "relationships": {
         "item": {
           "links": {
-            "related": "/v2/itemNames/a0ba1f72-86b7-5e22-b4d9-0a199b72b46f/item",
-            "self": "/v2/itemNames/a0ba1f72-86b7-5e22-b4d9-0a199b72b46f/relationships/item"
+            "related": "/v2/itemNames/afbecedd-04b8-510b-9567-4967f56dd3c1/item",
+            "self": "/v2/itemNames/afbecedd-04b8-510b-9567-4967f56dd3c1/relationships/item"
+          },
+          "data": {
+            "type": "items",
+            "id": "8562d2c0-a721-58a5-ac15-114b384f5062"
           }
         },
         "language": {
           "links": {
-            "related": "/v2/itemNames/a0ba1f72-86b7-5e22-b4d9-0a199b72b46f/language",
-            "self": "/v2/itemNames/a0ba1f72-86b7-5e22-b4d9-0a199b72b46f/relationships/language"
+            "related": "/v2/itemNames/afbecedd-04b8-510b-9567-4967f56dd3c1/language",
+            "self": "/v2/itemNames/afbecedd-04b8-510b-9567-4967f56dd3c1/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "aa1bb459-38cb-5ac2-842e-c55b9b588cf3"
+          }
+        }
+      }
+    },
+    {
+      "type": "itemNames",
+      "id": "150a4562-435b-5d00-ba3f-22c9f3517a2d",
+      "attributes": { "name": "Tulipano" },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/itemNames/150a4562-435b-5d00-ba3f-22c9f3517a2d/item",
+            "self": "/v2/itemNames/150a4562-435b-5d00-ba3f-22c9f3517a2d/relationships/item"
+          },
+          "data": {
+            "type": "items",
+            "id": "8562d2c0-a721-58a5-ac15-114b384f5062"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/itemNames/150a4562-435b-5d00-ba3f-22c9f3517a2d/language",
+            "self": "/v2/itemNames/150a4562-435b-5d00-ba3f-22c9f3517a2d/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "060b7142-04a0-58d1-aba0-7398acd6b574"
+          }
+        }
+      }
+    },
+    {
+      "type": "itemNames",
+      "id": "ab1109a3-3299-5e13-b1a6-d72a893dcc62",
+      "attributes": { "name": "Lale" },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/itemNames/ab1109a3-3299-5e13-b1a6-d72a893dcc62/item",
+            "self": "/v2/itemNames/ab1109a3-3299-5e13-b1a6-d72a893dcc62/relationships/item"
+          },
+          "data": {
+            "type": "items",
+            "id": "8562d2c0-a721-58a5-ac15-114b384f5062"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/itemNames/ab1109a3-3299-5e13-b1a6-d72a893dcc62/language",
+            "self": "/v2/itemNames/ab1109a3-3299-5e13-b1a6-d72a893dcc62/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "dc79216c-c319-5e40-80b0-076db245b4b2"
           }
         }
       }
@@ -150,41 +165,26 @@
     {
       "type": "itemNames",
       "id": "12b76957-2ee8-5fab-9c28-f5e9ec0fd953",
-      "attributes": {
-        "name": "Tulipán"
-      },
+      "attributes": { "name": "Tulipán" },
       "relationships": {
         "item": {
           "links": {
             "related": "/v2/itemNames/12b76957-2ee8-5fab-9c28-f5e9ec0fd953/item",
             "self": "/v2/itemNames/12b76957-2ee8-5fab-9c28-f5e9ec0fd953/relationships/item"
+          },
+          "data": {
+            "type": "items",
+            "id": "8562d2c0-a721-58a5-ac15-114b384f5062"
           }
         },
         "language": {
           "links": {
             "related": "/v2/itemNames/12b76957-2ee8-5fab-9c28-f5e9ec0fd953/language",
             "self": "/v2/itemNames/12b76957-2ee8-5fab-9c28-f5e9ec0fd953/relationships/language"
-          }
-        }
-      }
-    },
-    {
-      "type": "itemNames",
-      "id": "83a0cb29-9190-5b47-b4c5-c4d61841485e",
-      "attributes": {
-        "name": "Tulip"
-      },
-      "relationships": {
-        "item": {
-          "links": {
-            "related": "/v2/itemNames/83a0cb29-9190-5b47-b4c5-c4d61841485e/item",
-            "self": "/v2/itemNames/83a0cb29-9190-5b47-b4c5-c4d61841485e/relationships/item"
-          }
-        },
-        "language": {
-          "links": {
-            "related": "/v2/itemNames/83a0cb29-9190-5b47-b4c5-c4d61841485e/language",
-            "self": "/v2/itemNames/83a0cb29-9190-5b47-b4c5-c4d61841485e/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "92b16445-f366-583d-9e30-e5e3498b4ec1"
           }
         }
       }
@@ -192,20 +192,80 @@
     {
       "type": "itemNames",
       "id": "1b45a0af-589a-5ca4-83e9-f564c66d6891",
-      "attributes": {
-        "name": "チューリップ"
-      },
+      "attributes": { "name": "チューリップ" },
       "relationships": {
         "item": {
           "links": {
             "related": "/v2/itemNames/1b45a0af-589a-5ca4-83e9-f564c66d6891/item",
             "self": "/v2/itemNames/1b45a0af-589a-5ca4-83e9-f564c66d6891/relationships/item"
+          },
+          "data": {
+            "type": "items",
+            "id": "8562d2c0-a721-58a5-ac15-114b384f5062"
           }
         },
         "language": {
           "links": {
             "related": "/v2/itemNames/1b45a0af-589a-5ca4-83e9-f564c66d6891/language",
             "self": "/v2/itemNames/1b45a0af-589a-5ca4-83e9-f564c66d6891/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "e33cd106-49ec-55ee-af73-80d5cd58b2cc"
+          }
+        }
+      }
+    },
+    {
+      "type": "itemNames",
+      "id": "29d7510f-36e1-5a52-be18-626a8aaafe68",
+      "attributes": { "name": "Тюльпан" },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/itemNames/29d7510f-36e1-5a52-be18-626a8aaafe68/item",
+            "self": "/v2/itemNames/29d7510f-36e1-5a52-be18-626a8aaafe68/relationships/item"
+          },
+          "data": {
+            "type": "items",
+            "id": "8562d2c0-a721-58a5-ac15-114b384f5062"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/itemNames/29d7510f-36e1-5a52-be18-626a8aaafe68/language",
+            "self": "/v2/itemNames/29d7510f-36e1-5a52-be18-626a8aaafe68/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "2707add9-0eed-51fe-8971-1d21b9ccb672"
+          }
+        }
+      }
+    },
+    {
+      "type": "itemNames",
+      "id": "a0ba1f72-86b7-5e22-b4d9-0a199b72b46f",
+      "attributes": { "name": "Tulipe" },
+      "relationships": {
+        "item": {
+          "links": {
+            "related": "/v2/itemNames/a0ba1f72-86b7-5e22-b4d9-0a199b72b46f/item",
+            "self": "/v2/itemNames/a0ba1f72-86b7-5e22-b4d9-0a199b72b46f/relationships/item"
+          },
+          "data": {
+            "type": "items",
+            "id": "8562d2c0-a721-58a5-ac15-114b384f5062"
+          }
+        },
+        "language": {
+          "links": {
+            "related": "/v2/itemNames/a0ba1f72-86b7-5e22-b4d9-0a199b72b46f/language",
+            "self": "/v2/itemNames/a0ba1f72-86b7-5e22-b4d9-0a199b72b46f/relationships/language"
+          },
+          "data": {
+            "type": "languages",
+            "id": "4beabd80-40e5-5fe3-bca3-f1b374cd3dbd"
           }
         }
       }

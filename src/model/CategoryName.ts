@@ -1,6 +1,5 @@
 import { Category } from './Category';
 import { Attribute, Id, One, ToOne } from '../client/JsonApiModel';
-import { TypeCategory, TypeLanguage } from '../base/Types';
 import { Language } from './Language';
 
 export class CategoryName {
@@ -10,9 +9,9 @@ export class CategoryName {
   @Attribute()
   public readonly name?: string;
 
-  @ToOne(TypeCategory)
+  @ToOne(__TYPE_CATEGORY)
   public readonly category?: One<Category>;
 
-  @ToOne(TypeLanguage)
+  @ToOne(__TYPE_LANGUAGE)
   public readonly language?: One<Language>;
 }

@@ -22,10 +22,16 @@ export const svapiClient = (responses: object | object[], options: Options) => {
 
   return new SvapiClient(
     'https://localhost/',
-    () => {
+    (uri: string) => {
+      console.debug(uri);
+
       let jsonObject;
 
       if (Array.isArray(responses)) {
+        if (currentResponseIndex >= responses.length) {
+          throw new Error('no more responses');
+        }
+
         jsonObject = responses[currentResponseIndex];
       } else {
         jsonObject = responses;
