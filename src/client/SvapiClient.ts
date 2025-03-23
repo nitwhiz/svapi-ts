@@ -278,9 +278,7 @@ export class SvapiClient {
 
           if (
             result === undefined ||
-            (included.length === 0 &&
-              Array.isArray(result) &&
-              result.length === 0)
+            (Array.isArray(result) && result.length === 0)
           ) {
             const relatedPath =
               data.relationships?.[rel.propertyName].links?.related;
