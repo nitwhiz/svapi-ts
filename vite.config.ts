@@ -31,6 +31,7 @@ export default defineConfig({
   },
   build: {
     sourcemap: true,
+    minify: false,
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
       formats: ['es'],
